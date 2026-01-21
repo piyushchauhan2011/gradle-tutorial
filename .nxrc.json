@@ -1,0 +1,3 @@
+{
+  "extends": "nx/presets/core.json"
+}

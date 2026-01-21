@@ -28,12 +28,10 @@ Thumbs.db
 
 # Node / npm
 node_modules/
-package-lock.json
 npm-debug.log*
 dist/
 
-# Nx
+# Nx cache (keep .nxrc.json and package-lock.json in git)
 .nx/
-.nxrc.json
 .env
 .env.local
