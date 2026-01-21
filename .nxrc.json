@@ -1,0 +1,10 @@
+{
+  "extends": "nx/presets/gradle.json",
+  "plugins": ["@nrwl/gradle"],
+  "pluginsConfig": {
+    "@nrwl/gradle": {
+      "projectsPath": ".",
+      "cacheableOperations": ["build", "test", "compile", "check"]
+    }
+  }
+}

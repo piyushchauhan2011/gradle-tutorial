@@ -1,0 +1,27 @@
+{
+  "name": "gradle-tutorial-nx",
+  "version": "1.0.0",
+  "description": "Comprehensive Gradle tutorial with Nx monorepo management",
+  "private": true,
+  "scripts": {
+    "nx": "nx",
+    "start": "nx serve",
+    "build": "nx run-many --target=build --all",
+    "test": "nx run-many --target=test --all",
+    "lint": "nx workspace-lint",
+    "dep-graph": "nx dep-graph",
+    "affected:build": "nx affected --target=build",
+    "affected:test": "nx affected --target=test",
+    "affected:dep-graph": "nx affected:dep-graph"
+  },
+  "devDependencies": {
+    "@nrwl/cli": "latest",
+    "@nrwl/workspace": "latest",
+    "@nrwl/gradle": "latest",
+    "nx": "latest"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

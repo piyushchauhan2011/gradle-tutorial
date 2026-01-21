@@ -1,30 +1,47 @@
 # Gradle Tutorial
 
-This is a comprehensive tutorial to learn Gradle and Kotlin step by step. The project is structured as a multi-module Gradle build with lessons as subprojects.
+This is a comprehensive tutorial to learn Gradle and Kotlin step by step. The project is structured as a multi-module Gradle build with lessons as subprojects. Advanced lessons include Nx for monorepo management.
 
 ## Prerequisites
 - Java installed (JDK 11 or later recommended)
-- No need for Groovy or Kotlin CLI tools
+- Node.js 16+ and npm 8+ (optional, for Nx integration in Lesson 16)
 
 ## Setup
-1. Clone or download this project.
-2. Run `./g tasks` to see available tasks. (Alternatively, use `./gradlew tasks` if `./g` fails.)
-3. Navigate to each lesson directory and follow the README.md.
-4. Each lesson can be run using: `./g -p <lesson-name> <task>`
+
+### 1. Quick Start (Gradle Only)
+```bash
+# Just Gradle, no Nx required
+./g tasks
+./g -p lesson01-intro hello
+```
+
+### 2. Full Setup (Gradle + Nx)
+```bash
+# Install Nx and workspace dependencies
+npm install
+
+# Now you can use both Gradle and Nx commands
+./g -p lesson16-nx-gradle buildAll  # Gradle commands
+npm run build                         # Nx commands
+```
 
 ## Running Examples
 
+### Using Gradle CLI (Works immediately)
 Use the `./g` script (recommended) with the `-p` flag to specify the lesson:
 ```bash
-./g -p lesson01-intro hello         # Run a specific lesson task
-./g -p lesson02-setup build        # Build a lesson
-./g -p lesson15-image-processing run  # Run an example
+./g -p lesson01-intro hello              # Run a specific lesson task
+./g -p lesson02-setup build              # Build a lesson
+./g -p lesson15-image-processing run     # Run an example
+./g -p lesson16-nx-gradle buildAll       # Build Nx monorepo with Gradle
 ```
 
-Alternative using `./gradlew`:
+### Using Nx CLI (After `npm install`)
 ```bash
-./gradlew -p lesson01-intro hello
-./gradlew -p lesson02-setup build
+npm run build                    # Build all lessons
+npm run test                     # Test all lessons
+npm run dep-graph               # View dependency graph
+nx build apps-service-app       # Build specific Nx project
 ```
 
 ## Lessons

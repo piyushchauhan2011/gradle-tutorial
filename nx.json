@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "version": 2,
+  "extends": "nx/presets/gradle.json",
+  "plugins": ["@nrwl/gradle"],
+  "cli": {
+    "analytics": false,
+    "packageManager": "npm"
+  },
+  "defaultProject": "lesson16-nx-gradle",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/gradle",
+      "options": {
+        "cacheableOperations": ["build", "test", "compile", "check"],
+        "executionTimeout": 300
+      }
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "cache": true
+    },
+    "test": {
+      "cache": true
+    }
+  }
+}
