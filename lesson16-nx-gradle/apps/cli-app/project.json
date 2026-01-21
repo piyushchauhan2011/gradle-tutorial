@@ -1,14 +1,21 @@
 {
   "name": "apps-cli-app",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "src",
+  "tags": [
+    "type:app",
+    "scope:cli"
+  ],
   "targets": {
     "build": {
       "executor": "@nrwl/gradle:run",
       "options": {
         "gradleTask": ":apps:cli-app:build"
       },
-      "outputs": ["build"]
+      "outputs": [
+        "{workspaceRoot}/build"
+      ]
     },
     "test": {
       "executor": "@nrwl/gradle:run",
@@ -28,6 +35,5 @@
         "gradleTask": ":apps:cli-app:showInfo"
       }
     }
-  },
-  "tags": ["type:app", "scope:cli"]
+  }
 }

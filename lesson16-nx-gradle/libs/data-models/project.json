@@ -1,14 +1,21 @@
 {
   "name": "libs-data-models",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "src",
+  "tags": [
+    "type:lib",
+    "scope:data"
+  ],
   "targets": {
     "build": {
       "executor": "@nrwl/gradle:run",
       "options": {
         "gradleTask": ":libs:data-models:build"
       },
-      "outputs": ["build"]
+      "outputs": [
+        "{workspaceRoot}/build"
+      ]
     },
     "test": {
       "executor": "@nrwl/gradle:run",
@@ -22,6 +29,5 @@
         "gradleTask": ":libs:data-models:showInfo"
       }
     }
-  },
-  "tags": ["type:lib", "scope:data"]
+  }
 }

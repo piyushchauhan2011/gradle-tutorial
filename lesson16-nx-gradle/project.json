@@ -1,5 +1,6 @@
 {
   "name": "lesson16-nx-gradle",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
   "version": "0.0.1",
   "description": "Nx-managed Gradle monorepo for lesson16"
 }

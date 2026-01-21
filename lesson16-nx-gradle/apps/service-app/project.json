@@ -1,14 +1,21 @@
 {
   "name": "apps-service-app",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "src",
+  "tags": [
+    "type:app",
+    "scope:service"
+  ],
   "targets": {
     "build": {
       "executor": "@nrwl/gradle:run",
       "options": {
         "gradleTask": ":apps:service-app:build"
       },
-      "outputs": ["build"]
+      "outputs": [
+        "{workspaceRoot}/build"
+      ]
     },
     "test": {
       "executor": "@nrwl/gradle:run",
@@ -28,6 +35,5 @@
         "gradleTask": ":apps:service-app:showInfo"
       }
     }
-  },
-  "tags": ["type:app", "scope:service"]
+  }
 }
