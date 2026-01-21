@@ -8,7 +8,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("CliApp")
+    mainClass.set("com.example.apps.CliApp")
 }
 
 tasks.register("showInfo") {

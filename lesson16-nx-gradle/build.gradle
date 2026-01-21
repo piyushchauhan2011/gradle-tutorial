@@ -1,9 +1,8 @@
 // Lesson 16: Nx with Gradle - Root Build Script (Groovy DSL)
 // Demonstrates Nx integration for workspace management, caching, and task orchestration
 
-plugins {
-    id 'java'
-}
+// Root project is a container project - no Java plugin needed here
+// All Java code is in subprojects (apps/* and libs/*)
 
 // Common configuration for all subprojects
 subprojects {

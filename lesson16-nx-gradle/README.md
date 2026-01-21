@@ -5,6 +5,8 @@
 - Java JDK 11+ (for Gradle)
 - Node.js 16+ and npm 8+ (for Nx)
 
+> **Note for VS Code users**: This is a nested Gradle project. If VS Code doesn't recognize Java files, see [VSCODE_SETUP.md](./VSCODE_SETUP.md) for setup instructions.
+
 ## Setup
 
 ### 1. Install Nx globally (optional)
@@ -100,11 +102,15 @@ From the project root, run these commands:
 ./g -p lesson16-nx-gradle showDependencyGraph
 
 # Test specific project
-./g -p lesson16-nx-gradle:libs:core-utils test
-./g -p lesson16-nx-gradle:libs:data-models test
+./g -p lesson16-nx-gradle :libs:core-utils:test
+./g -p lesson16-nx-gradle :libs:data-models:test
 
 # Show info about a project
-./g -p lesson16-nx-gradle:apps:service-app showInfo
+./g -p lesson16-nx-gradle :apps:service-app:showInfo
+
+# Run specific application
+./g -p lesson16-nx-gradle :apps:cli-app:run
+./g -p lesson16-nx-gradle :apps:service-app:run
 ```
 
 ### Using Nx (with npm)
@@ -236,10 +242,10 @@ Command-line tool that uses:
 ./g -p lesson16-nx-gradle testAll --info
 
 # Test specific library
-./g -p lesson16-nx-gradle:libs:core-utils test
+./g -p lesson16-nx-gradle :libs:core-utils:test
 
 # Run specific test
-./g -p lesson16-nx-gradle:libs:core-utils test --tests StringUtilsTest.testCapitalize
+./g -p lesson16-nx-gradle :libs:core-utils:test --tests StringUtilsTest.testCapitalize
 ```
 
 ### Using Nx

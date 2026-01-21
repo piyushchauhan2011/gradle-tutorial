@@ -2,6 +2,8 @@
   "java.debug.settings.onBuildFailureProceed": true,
   "java.configuration.updateBuildConfiguration": "automatic",
   "java.import.gradle.enabled": true,
+  "java.import.gradle.wrapper.enabled": true,
+  "java.import.eclipse.enabled": false,
   "[java]": {
     "editor.defaultFormatter": "redhat.java",
     "editor.formatOnSave": true
@@ -9,6 +11,9 @@
   "java.compile.nullAnalysis.mode": "automatic",
   "files.exclude": {
     "**/.gradle": true,
-    "**/build": false
+    "**/build": false,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true
   }
 }
