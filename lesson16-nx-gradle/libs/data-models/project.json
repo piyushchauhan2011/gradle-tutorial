@@ -1,0 +1,27 @@
+{
+  "name": "libs-data-models",
+  "projectType": "library",
+  "sourceRoot": "src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/gradle:run",
+      "options": {
+        "gradleTask": ":libs:data-models:build"
+      },
+      "outputs": ["build"]
+    },
+    "test": {
+      "executor": "@nrwl/gradle:run",
+      "options": {
+        "gradleTask": ":libs:data-models:test"
+      }
+    },
+    "showInfo": {
+      "executor": "@nrwl/gradle:run",
+      "options": {
+        "gradleTask": ":libs:data-models:showInfo"
+      }
+    }
+  },
+  "tags": ["type:lib", "scope:data"]
+}

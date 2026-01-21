@@ -1,0 +1,33 @@
+{
+  "name": "apps-cli-app",
+  "projectType": "application",
+  "sourceRoot": "src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/gradle:run",
+      "options": {
+        "gradleTask": ":apps:cli-app:build"
+      },
+      "outputs": ["build"]
+    },
+    "test": {
+      "executor": "@nrwl/gradle:run",
+      "options": {
+        "gradleTask": ":apps:cli-app:test"
+      }
+    },
+    "run": {
+      "executor": "@nrwl/gradle:run",
+      "options": {
+        "gradleTask": ":apps:cli-app:run"
+      }
+    },
+    "showInfo": {
+      "executor": "@nrwl/gradle:run",
+      "options": {
+        "gradleTask": ":apps:cli-app:showInfo"
+      }
+    }
+  },
+  "tags": ["type:app", "scope:cli"]
+}

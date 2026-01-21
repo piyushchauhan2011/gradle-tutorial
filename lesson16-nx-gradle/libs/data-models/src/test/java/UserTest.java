@@ -1,3 +1,8 @@
+package com.example.data;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
 public class UserTest {
     @org.junit.Test
     public void testUserCreation() {

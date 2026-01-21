@@ -1,0 +1,27 @@
+{
+  "name": "libs-core-utils",
+  "projectType": "library",
+  "sourceRoot": "src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/gradle:run",
+      "options": {
+        "gradleTask": ":libs:core-utils:build"
+      },
+      "outputs": ["build"]
+    },
+    "test": {
+      "executor": "@nrwl/gradle:run",
+      "options": {
+        "gradleTask": ":libs:core-utils:test"
+      }
+    },
+    "showInfo": {
+      "executor": "@nrwl/gradle:run",
+      "options": {
+        "gradleTask": ":libs:core-utils:showInfo"
+      }
+    }
+  },
+  "tags": ["type:lib", "scope:core"]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "apps-service-app",
+  "projectType": "application",
+  "sourceRoot": "src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/gradle:run",
+      "options": {
+        "gradleTask": ":apps:service-app:build"
+      },
+      "outputs": ["build"]
+    },
+    "test": {
+      "executor": "@nrwl/gradle:run",
+      "options": {
+        "gradleTask": ":apps:service-app:test"
+      }
+    },
+    "run": {
+      "executor": "@nrwl/gradle:run",
+      "options": {
+        "gradleTask": ":apps:service-app:run"
+      }
+    },
+    "showInfo": {
+      "executor": "@nrwl/gradle:run",
+      "options": {
+        "gradleTask": ":apps:service-app:showInfo"
+      }
+    }
+  },
+  "tags": ["type:app", "scope:service"]
+}
