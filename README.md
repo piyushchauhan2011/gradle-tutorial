@@ -41,6 +41,8 @@ Alternative using `./gradlew`:
 11. [Lesson 11: Consuming Published Artifacts](lesson11-consuming-artifacts/README.md)
 12. [Lesson 12: Kotlin Consumer App](lesson12-kotlin-consumer/README.md)
 13. [Lesson 13: Scala Consumer App](lesson13-scala-consumer/README.md)
-14. [Lesson 15: Image Processing and Manipulation](lesson15-image-processing/README.md)
+14. [Lesson 14: Swing GUI Applications](lesson14-swing-gui/README.md)
+15. [Lesson 15: Image Processing and Manipulation](lesson15-image-processing/README.md)
+16. [Lesson 16: Nx with Gradle](lesson16-nx-gradle/README.md) - Monorepo organization, dependency management, and build caching
 
 Each lesson includes runnable examples and exercises. See the "Running Examples" section above for command syntax.

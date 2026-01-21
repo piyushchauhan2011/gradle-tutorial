@@ -1,0 +1,6 @@
+rootProject.name = 'lesson16-nx-gradle'
+
+include 'libs:core-utils'
+include 'libs:data-models'
+include 'apps:service-app'
+include 'apps:cli-app'

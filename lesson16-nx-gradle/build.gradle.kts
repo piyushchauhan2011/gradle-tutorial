@@ -1,0 +1,70 @@
+// Lesson 16: Nx with Gradle - Root Build Script (Kotlin DSL)
+// Demonstrates Nx integration for workspace management, caching, and task orchestration
+
+plugins {
+    java
+}
+
+// Common configuration for all subprojects
+subprojects {
+    apply(plugin = "java")
+    
+    configure<JavaPluginExtension> {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    
+    repositories {
+        mavenCentral()
+    }
+    
+    dependencies {
+        testImplementation("junit:junit:4.13.2")
+    }
+    
+    // Enable detailed test output
+    tasks.test {
+        testLogging {
+            events("passed", "skipped", "failed")
+            exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+        }
+    }
+}
+
+// Workspace-level caching configuration
+tasks.register("buildAll") {
+    description = "Build all subprojects with caching"
+    dependsOn(":apps:service-app:build", ":apps:cli-app:build", ":libs:core-utils:build", ":libs:data-models:build")
+}
+
+tasks.register("testAll") {
+    description = "Test all subprojects"
+    dependsOn(":apps:service-app:test", ":apps:cli-app:test", ":libs:core-utils:test", ":libs:data-models:test")
+}
+
+tasks.register("cleanAll") {
+    description = "Clean all build artifacts"
+    dependsOn(":apps:service-app:clean", ":apps:cli-app:clean", ":libs:core-utils:clean", ":libs:data-models:clean")
+}
+
+// Task to show dependency graph (useful for understanding workspace structure)
+tasks.register("showDependencyGraph") {
+    description = "Display the project dependency graph"
+    doLast {
+        println("""
+        Nx-styled Gradle Workspace Structure:
+        
+        Apps:
+          - service-app (REST API server)
+            └─ depends on: core-utils, data-models
+          - cli-app (Command-line interface)
+            └─ depends on: core-utils
+        
+        Libs:
+          - core-utils (Shared utilities)
+          - data-models (Shared data structures)
+        
+        Run: ./g -p lesson16-nx-gradle showDependencyGraph
+        """.trimIndent())
+    }
+}
