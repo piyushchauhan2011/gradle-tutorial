@@ -44,9 +44,9 @@ npm run affected:test
 The `npm install` command installs:
 
 ```
-@nrwl/cli          - Nx command-line interface
-@nrwl/workspace    - Nx workspace management
-@nrwl/gradle       - Gradle integration plugin
+@nx/cli            - Nx command-line interface
+@nx/workspace      - Nx workspace management
+@nx/gradle         - Gradle integration plugin
 nx                 - Nx core package
 ```
 

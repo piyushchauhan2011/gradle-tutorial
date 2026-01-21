@@ -19,8 +19,7 @@ npm install
 
 This will install:
 - `nx` - Nx CLI
-- `@nrwl/cli` - Nx command line tools
-- `@nrwl/gradle` - Nx Gradle plugin for Nx orchestration
+- `@nx/gradle` - Nx Gradle plugin for Gradle integration
 
 ### 3. Verify setup
 ```bash
