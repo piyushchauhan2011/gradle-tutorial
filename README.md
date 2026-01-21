@@ -8,7 +8,7 @@ This is a comprehensive tutorial to learn Gradle and Kotlin step by step. The pr
 
 ## Setup
 1. Clone or download this project.
-2. Run `./gradlew tasks` to see available tasks. If `./gradlew` fails, use: `java -Dorg.gradle.appname=gradlew -classpath gradle/wrapper/gradle-wrapper.jar org.gradle.wrapper.GradleWrapperMain <task>`
+2. Run `./g tasks` to see available tasks. (Alternatively, use `./gradlew tasks` if `./g` fails.)
 3. Navigate to each lesson directory and follow the README.md.
 
 ## Lessons

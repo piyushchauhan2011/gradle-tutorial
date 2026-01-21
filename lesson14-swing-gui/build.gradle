@@ -1,0 +1,29 @@
+// Lesson 14: Java Swing GUI - Groovy DSL
+
+plugins {
+    id 'java'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // No additional dependencies needed for basic Swing (included in JDK)
+}
+
+tasks.register('runSwingApp') {
+    group = 'application'
+    description = 'Runs the Swing GUI application'
+    doLast {
+        javaexec {
+            mainClass = 'SwingApp'
+            classpath = sourceSets.main.runtimeClasspath
+        }
+    }
+}
