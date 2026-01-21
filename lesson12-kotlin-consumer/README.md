@@ -9,7 +9,8 @@ Using published artifacts in a Kotlin application.
 - Consuming Java libraries in Kotlin
 
 ## Runnable Examples
-- Run `./gradlew run` (executes Main.kt, which uses the Library from lesson10).
+- Run `./g -p lesson12-kotlin-consumer run` (executes Main.kt, which uses the Library from lesson10).
 
 ## Prerequisites
-- Run `./gradlew :lesson10-publishing:publish` first to publish the library.
+- Run `./g -p lesson10-publishing publish` first to publish the library.
+- Alternative: `./gradlew -p lesson10-publishing publish`

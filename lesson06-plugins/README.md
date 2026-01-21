@@ -8,7 +8,8 @@ Applying and configuring plugins.
 - Custom plugins
 
 ## Runnable Examples
-- Run `./gradlew run` (runs the app).
+- Run `./g -p lesson06-plugins run` (runs the app).
+- Alternative: `./gradlew -p lesson06-plugins run`
 
 ## Exercises
 1. Apply a plugin and configure its properties.

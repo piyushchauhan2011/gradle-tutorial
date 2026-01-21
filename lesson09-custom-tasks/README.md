@@ -8,7 +8,8 @@ Extending Gradle with custom logic.
 - Plugin development
 
 ## Runnable Examples
-- Run `./gradlew custom`.
+- Run `./g -p lesson09-custom-tasks custom`.
+- Alternative: `./gradlew -p lesson09-custom-tasks custom`
 
 ## Exercises
 1. Create a plugin that applies a custom task.

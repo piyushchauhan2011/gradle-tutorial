@@ -10,6 +10,22 @@ This is a comprehensive tutorial to learn Gradle and Kotlin step by step. The pr
 1. Clone or download this project.
 2. Run `./g tasks` to see available tasks. (Alternatively, use `./gradlew tasks` if `./g` fails.)
 3. Navigate to each lesson directory and follow the README.md.
+4. Each lesson can be run using: `./g -p <lesson-name> <task>`
+
+## Running Examples
+
+Use the `./g` script (recommended) with the `-p` flag to specify the lesson:
+```bash
+./g -p lesson01-intro hello         # Run a specific lesson task
+./g -p lesson02-setup build        # Build a lesson
+./g -p lesson15-image-processing run  # Run an example
+```
+
+Alternative using `./gradlew`:
+```bash
+./gradlew -p lesson01-intro hello
+./gradlew -p lesson02-setup build
+```
 
 ## Lessons
 1. [Lesson 1: Introduction to Gradle](lesson01-intro/README.md)
@@ -27,4 +43,4 @@ This is a comprehensive tutorial to learn Gradle and Kotlin step by step. The pr
 13. [Lesson 13: Scala Consumer App](lesson13-scala-consumer/README.md)
 14. [Lesson 15: Image Processing and Manipulation](lesson15-image-processing/README.md)
 
-Each lesson includes runnable examples and exercises. Use `./gradlew` from the root or lesson directory to run tasks.
+Each lesson includes runnable examples and exercises. See the "Running Examples" section above for command syntax.

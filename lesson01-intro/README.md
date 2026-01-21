@@ -9,10 +9,10 @@ Overview of Gradle as a build tool, its benefits over others, and ecosystem.
 - Gradle vs. Maven/Ant
 
 ## Runnable Examples
-- Groovy DSL: Run `./gradlew hello` (prints "Hello, Gradle!")
-- Kotlin DSL: Same command, uses the .kts file
+- Run `./g -p lesson01-intro hello` (prints "Hello, Gradle!")
+- Alternative: `./gradlew -p lesson01-intro hello`
 
 ## Exercises
 1. Modify the task to print a custom message (e.g., "Hello, World!").
    - Edit the build.gradle or build.gradle.kts file.
-   - Run `./gradlew hello` to verify.
+   - Run `./g -p lesson01-intro hello` to verify.
