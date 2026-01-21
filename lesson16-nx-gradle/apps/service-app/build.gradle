@@ -9,7 +9,7 @@ dependencies {
 }
 
 application {
-    mainClass = 'ServiceApp'
+    mainClass = 'com.example.apps.ServiceApp'
 }
 
 tasks.register('showInfo') {

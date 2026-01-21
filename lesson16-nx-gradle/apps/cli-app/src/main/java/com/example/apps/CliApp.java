@@ -1,3 +1,5 @@
+package com.example.apps;
+
 import com.example.core.utils.StringUtils;
 
 public class CliApp {
