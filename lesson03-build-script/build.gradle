@@ -1,0 +1,21 @@
+// Lesson 3: Writing Your First Build Script - Groovy DSL
+// Basics of build scripts and tasks.
+
+task customTask {
+    doLast {
+        println 'Custom task executed'
+    }
+}
+
+task anotherTask {
+    doLast {
+        println 'Another task executed'
+    }
+}
+
+task dependentTask {
+    dependsOn customTask
+    doLast {
+        println 'Dependent task executed after customTask'
+    }
+}

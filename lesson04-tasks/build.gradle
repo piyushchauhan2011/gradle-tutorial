@@ -1,0 +1,20 @@
+// Lesson 4: Managing Tasks - Groovy DSL
+// Advanced task creation and lifecycle.
+
+plugins {
+    id 'base'
+}
+
+task process {
+    inputs.property('message', 'Hello')
+    doLast {
+        println inputs.properties.message
+    }
+}
+
+task copyFiles(type: Copy) {
+    from '.'
+    include '*.md'
+    into 'build/copy'
+    dependsOn 'build'
+}

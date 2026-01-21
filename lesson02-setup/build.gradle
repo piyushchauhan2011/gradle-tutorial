@@ -1,0 +1,6 @@
+// Lesson 2: Setting Up a Gradle Project - Groovy DSL
+// Basic project with Java plugin.
+
+plugins {
+    id 'java'
+}

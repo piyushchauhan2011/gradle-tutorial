@@ -1,0 +1,9 @@
+// Lesson 6: Using Plugins - Groovy DSL
+
+plugins {
+    id 'application'
+}
+
+application {
+    mainClass = 'App'
+}

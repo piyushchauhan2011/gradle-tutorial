@@ -1,0 +1,8 @@
+// Lesson 1: Introduction to Gradle - Groovy DSL
+// This build script demonstrates a simple "hello" task.
+
+task hello {
+    doLast {
+        println 'Hello, Gradle!'
+    }
+}

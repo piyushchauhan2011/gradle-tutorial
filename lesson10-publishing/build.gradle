@@ -1,0 +1,17 @@
+// Lesson 10: Publishing Artifacts - Groovy DSL
+
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = 'com.example'
+version = '1.0'
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}

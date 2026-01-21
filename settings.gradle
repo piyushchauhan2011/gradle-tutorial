@@ -1,0 +1,12 @@
+rootProject.name = 'gradle-tutorial'
+
+include 'lesson01-intro'
+include 'lesson02-setup'
+include 'lesson03-build-script'
+include 'lesson04-tasks'
+include 'lesson05-dependencies'
+include 'lesson06-plugins'
+include 'lesson07-multi-module'
+include 'lesson08-testing'
+include 'lesson09-custom-tasks'
+include 'lesson10-publishing'

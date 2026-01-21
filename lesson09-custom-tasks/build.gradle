@@ -1,0 +1,10 @@
+// Lesson 9: Custom Tasks and Plugins - Groovy DSL
+
+class GreetingTask extends DefaultTask {
+    @TaskAction
+    void greet() {
+        println 'Hello from custom task!'
+    }
+}
+
+task custom(type: GreetingTask)
