@@ -22,5 +22,6 @@ This is a comprehensive tutorial to learn Gradle and Kotlin step by step. The pr
 8. [Lesson 8: Testing in Gradle](lesson08-testing/README.md)
 9. [Lesson 9: Custom Tasks and Plugins](lesson09-custom-tasks/README.md)
 10. [Lesson 10: Publishing Artifacts](lesson10-publishing/README.md)
+11. [Lesson 11: Consuming Published Artifacts](lesson11-consuming-artifacts/README.md)
 
 Each lesson includes runnable examples and exercises. Use `./gradlew` from the root or lesson directory to run tasks.

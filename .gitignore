@@ -3,6 +3,9 @@
 build/
 gradle/wrapper/gradle-wrapper.jar
 
+# Remote repo
+remote-repo/
+
 # IDE
 .idea/
 *.iml

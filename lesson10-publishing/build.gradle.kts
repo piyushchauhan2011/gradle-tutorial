@@ -11,7 +11,13 @@ version = "1.0"
 publishing {
     publications {
         create<MavenPublication>("maven") {
+            artifactId = "library"
             from(components["java"])
+        }
+    }
+    repositories {
+        maven {
+            url = uri("../remote-repo")
         }
     }
 }

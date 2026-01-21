@@ -9,6 +9,7 @@ Sharing builds via repositories.
 
 ## Runnable Examples
 - Run `./gradlew publishToMavenLocal`.
+- Run `./gradlew publish` (publishes to the configured remote repo at `../remote-repo`).
 
 ## Exercises
-1. Configure publishing to a remote repo.
+1. Configure publishing to a remote repo. (Completed: Added a local file-based repository at `../remote-repo` for demonstration.)
