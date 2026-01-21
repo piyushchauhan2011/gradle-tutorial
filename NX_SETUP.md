@@ -7,13 +7,13 @@ Works immediately without npm:
 
 ```bash
 # Build all
-./g -p lesson16-nx-gradle buildAll
+./gradlew -p lesson16-nx-gradle buildAll
 
 # Test all
-./g -p lesson16-nx-gradle testAll
+./gradlew -p lesson16-nx-gradle testAll
 
 # Show dependency graph
-./g -p lesson16-nx-gradle showDependencyGraph
+./gradlew -p lesson16-nx-gradle showDependencyGraph
 ```
 
 ### Option 2: Nx + Gradle (After npm install)
@@ -82,17 +82,17 @@ gradle-tutorial/
 
 ## Commands Comparison
 
-| Task             | Gradle (`./g`)                                  | Nx (`npm run`)           |
-| ---------------- | ----------------------------------------------- | ------------------------ |
-| Build all        | `./g -p lesson16-nx-gradle buildAll`            | `npm run build`          |
-| Test all         | `./g -p lesson16-nx-gradle testAll`             | `npm run test`           |
-| Dependency graph | `./g -p lesson16-nx-gradle showDependencyGraph` | `npm run dep-graph`      |
+| Task             | Gradle (`./gradlew`)                                  | Nx (`npm run`)           |
+| ---------------- | ----------------------------------------------------- | ------------------------ |
+| Build all        | `./gradlew -p lesson16-nx-gradle buildAll`            | `npm run build`          |
+| Test all         | `./gradlew -p lesson16-nx-gradle testAll`             | `npm run test`           |
+| Dependency graph | `./gradlew -p lesson16-nx-gradle showDependencyGraph` | `npm run dep-graph`      |
 | Affected build   | Manual                                          | `npm run affected:build` |
 | Affected test    | Manual                                          | `npm run affected:test`  |
 
 ## When to Use Each
 
-### Use Gradle (`./g`)
+### Use Gradle (`./gradlew`)
 - Quick tests without npm setup
 - Specific lesson exercises
 - Understanding Gradle fundamentals
@@ -123,7 +123,7 @@ gradle-tutorial/
 
 ### Gradle commands work, Nx doesn't
 - That's fine! Nx is optional
-- Use `./g -p lesson16-nx-gradle buildAll` instead
+- Use `./gradlew -p lesson16-nx-gradle buildAll` instead
 - Nx only adds convenience for large monorepos
 
 ## Learn More

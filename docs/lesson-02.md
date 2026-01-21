@@ -11,11 +11,6 @@ A Gradle project requires a `build.gradle` or `build.gradle.kts` file and option
 ## Running the Example
 From the project root:
 ```bash
-./g -p lesson02-setup build
-```
-
-Alternatively:
-```bash
 ./gradlew -p lesson02-setup build
 ```
 

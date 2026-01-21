@@ -21,7 +21,7 @@ VS Code's Java extension needs to be configured to recognize nested Gradle proje
 
 1. **Separate Gradle Project**: `lesson16-nx-gradle` maintains its own `settings.gradle` defining its subprojects (`apps:cli-app`, `apps:service-app`, `libs:core-utils`, `libs:data-models`)
 2. **VS Code Recognition**: VS Code's Java extension scans for `settings.gradle` files and imports them as separate Gradle projects
-3. **Gradle Commands**: Use `./g -p lesson16-nx-gradle` from the root directory
+3. **Gradle Commands**: Use `./gradlew -p lesson16-nx-gradle` from the root directory
 
 ## If Issues Persist
 

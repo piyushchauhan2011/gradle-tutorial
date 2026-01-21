@@ -63,7 +63,7 @@ tasks.register('showDependencyGraph') {
           - core-utils (Shared utilities)
           - data-models (Shared data structures)
         
-        Run: ./g -p lesson16-nx-gradle showDependencyGraph
+        Run: ./gradlew -p lesson16-nx-gradle showDependencyGraph
         """
     }
 }

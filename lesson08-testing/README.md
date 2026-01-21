@@ -9,8 +9,7 @@ Integrating and running tests.
 - Reporting
 
 ## Runnable Examples
-- Run `./g -p lesson08-testing test`.
-- Alternative: `./gradlew -p lesson08-testing test`
+- Run `./gradlew -p lesson08-testing test`.
 
 ## Test Output Options
 
@@ -18,16 +17,16 @@ You can view test output with various verbosity levels:
 
 ```bash
 # Show all test output with verbose logging
-./g -p lesson08-testing test --info
+./gradlew -p lesson08-testing test --info
 
 # Show extra verbose output (stack traces, etc.)
-./g -p lesson08-testing test --debug
+./gradlew -p lesson08-testing test --debug
 
 # Run specific test
-./g -p lesson08-testing test --tests CalculatorTest.testAdd
+./gradlew -p lesson08-testing test --tests CalculatorTest.testAdd
 
 # List all tests without running
-./g -p lesson08-testing test --dry-run
+./gradlew -p lesson08-testing test --dry-run
 ```
 
 ## Exercises

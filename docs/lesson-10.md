@@ -30,10 +30,5 @@ repositories {
 
 From the project root, run:
 ```bash
-./g -p lesson10-publishing publish
-```
-
-Alternatively:
-```bash
 ./gradlew -p lesson10-publishing publish
 ```

@@ -5,34 +5,34 @@ All commands from the README have been tested and verified to work correctly.
 ## ✅ Gradle Commands (All Working)
 
 ### Workspace-Level Tasks
-- ✅ `./g -p lesson16-nx-gradle :showDependencyGraph` - Displays workspace structure
-- ✅ `./g -p lesson16-nx-gradle :buildAll` - Builds all subprojects successfully
-- ✅ `./g -p lesson16-nx-gradle :testAll` - Runs all tests successfully
-- ✅ `./g -p lesson16-nx-gradle :cleanAll` - Cleans all build artifacts
+- ✅ `./gradlew -p lesson16-nx-gradle :showDependencyGraph` - Displays workspace structure
+- ✅ `./gradlew -p lesson16-nx-gradle :buildAll` - Builds all subprojects successfully
+- ✅ `./gradlew -p lesson16-nx-gradle :testAll` - Runs all tests successfully
+- ✅ `./gradlew -p lesson16-nx-gradle :cleanAll` - Cleans all build artifacts
 
 ### Project-Specific Tasks
-- ✅ `./g -p lesson16-nx-gradle :apps:cli-app:showInfo` - Shows CLI app info
-- ✅ `./g -p lesson16-nx-gradle :apps:cli-app:run` - Runs CLI app successfully
-- ✅ `./g -p lesson16-nx-gradle :apps:service-app:run` - Runs service app successfully
-- ✅ `./g -p lesson16-nx-gradle :libs:core-utils:test` - Tests core-utils library
-- ✅ `./g -p lesson16-nx-gradle :libs:data-models:test` - Tests data-models library
-- ✅ `./g -p lesson16-nx-gradle :libs:core-utils:test --tests StringUtilsTest.testCapitalize` - Runs specific test
+- ✅ `./gradlew -p lesson16-nx-gradle :apps:cli-app:showInfo` - Shows CLI app info
+- ✅ `./gradlew -p lesson16-nx-gradle :apps:cli-app:run` - Runs CLI app successfully
+- ✅ `./gradlew -p lesson16-nx-gradle :apps:service-app:run` - Runs service app successfully
+- ✅ `./gradlew -p lesson16-nx-gradle :libs:core-utils:test` - Tests core-utils library
+- ✅ `./gradlew -p lesson16-nx-gradle :libs:data-models:test` - Tests data-models library
+- ✅ `./gradlew -p lesson16-nx-gradle :libs:core-utils:test --tests StringUtilsTest.testCapitalize` - Runs specific test
 
 ## ✅ NPM Scripts (All Working)
 
-- ✅ `npm run build` - Builds all projects (uses `./g -p lesson16-nx-gradle buildAll`)
-- ✅ `npm run test` - Tests all projects (uses `./g -p lesson16-nx-gradle testAll`)
+- ✅ `npm run build` - Builds all projects (uses `./gradlew -p lesson16-nx-gradle buildAll`)
+- ✅ `npm run test` - Tests all projects (uses `./gradlew -p lesson16-nx-gradle testAll`)
 
 ## Command Syntax Notes
 
 **Correct syntax for subproject tasks:**
 ```bash
-./g -p lesson16-nx-gradle :project:path:task
+./gradlew -p lesson16-nx-gradle :project:path:task
 ```
 
 **Examples:**
-- `./g -p lesson16-nx-gradle :libs:core-utils:test` ✅
-- `./g -p lesson16-nx-gradle:libs:core-utils test` ❌ (incorrect)
+- `./gradlew -p lesson16-nx-gradle :libs:core-utils:test` ✅
+- `./gradlew -p lesson16-nx-gradle:libs:core-utils test` ❌ (incorrect)
 
 The `-p` flag specifies the project directory, and the task path uses colons (`:`) to separate project hierarchy and task name.
 

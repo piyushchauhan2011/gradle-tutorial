@@ -10,11 +10,6 @@ Build scripts define tasks and configurations. Tasks are units of work with acti
 ## Running the Example
 From the project root:
 ```bash
-./g -p lesson03-build-script customTask
-```
-
-Alternatively:
-```bash
 ./gradlew -p lesson03-build-script customTask
 ```
 
@@ -39,4 +34,4 @@ tasks.register("dependentTask") {
 }
 ```
 
-Run `./g -p lesson03-build-script dependentTask` from the project root.
+Run `./gradlew -p lesson03-build-script dependentTask` from the project root.

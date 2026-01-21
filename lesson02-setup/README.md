@@ -9,10 +9,9 @@ Creating and initializing a new Gradle project.
 - Gradle wrapper
 
 ## Runnable Examples
-- Run `./g -p lesson02-setup build` (compiles the Java code).
-- Alternative: `./gradlew -p lesson02-setup build`
+- Run `./gradlew -p lesson02-setup build` (compiles the Java code).
 
 ## Exercises
 1. Add a new source file (e.g., `Greeting.java`) and rebuild the project.
    - Create the file in `src/main/java/`.
-   - Run `./g -p lesson02-setup build` to verify.
+   - Run `./gradlew -p lesson02-setup build` to verify.

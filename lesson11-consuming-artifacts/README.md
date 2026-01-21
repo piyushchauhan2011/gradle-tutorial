@@ -9,8 +9,7 @@ Using artifacts published to repositories in other projects.
 - Local repositories
 
 ## Runnable Examples
-- Run `./g -p lesson11-consuming-artifacts run` (executes Main.java, which uses the Library from lesson10).
+- Run `./gradlew -p lesson11-consuming-artifacts run` (executes Main.java, which uses the Library from lesson10).
 
 ## Prerequisites
-- Run `./g -p lesson10-publishing publish` first to publish the library.
-- Alternative: `./gradlew -p lesson10-publishing publish`
+- Run `./gradlew -p lesson10-publishing publish` first to publish the library.

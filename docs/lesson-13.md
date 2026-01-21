@@ -24,10 +24,5 @@ dependencies {
 
 From the project root, run:
 ```bash
-./g -p lesson13-scala-consumer run
-```
-
-Alternatively:
-```bash
 ./gradlew -p lesson13-scala-consumer run
 ```

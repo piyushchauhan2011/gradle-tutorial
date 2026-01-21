@@ -11,9 +11,8 @@ This lesson introduces building graphical user interfaces (GUIs) in Java using S
 
 ## Running the Example
 1. Navigate to this lesson directory.
-2. Run `./g -p lesson14-swing-gui runSwingApp` to launch the GUI application.
-3. Alternative: `./gradlew -p lesson14-swing-gui runSwingApp`
-4. A GUI window will open. Interact with the elements to see layouts and events in action.
+2. Run `./gradlew -p lesson14-swing-gui runSwingApp` to launch the GUI application.
+3. A GUI window will open. Interact with the elements to see layouts and events in action.
 
 ## Exercises
 - Modify the layout from BorderLayout to GridLayout and observe the changes.

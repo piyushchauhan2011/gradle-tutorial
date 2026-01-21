@@ -6,8 +6,8 @@
   "scripts": {
     "nx": "nx",
     "start": "nx serve",
-    "build": "./g -p lesson16-nx-gradle buildAll",
-    "test": "./g -p lesson16-nx-gradle testAll",
+    "build": "./gradlew -p lesson16-nx-gradle buildAll",
+    "test": "./gradlew -p lesson16-nx-gradle testAll",
     "lint": "npx nx show projects",
     "dep-graph": "nx dep-graph",
     "projects": "nx show projects",

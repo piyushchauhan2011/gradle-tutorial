@@ -11,8 +11,8 @@ This is a comprehensive tutorial to learn Gradle and Kotlin step by step. The pr
 ### 1. Quick Start (Gradle Only)
 ```bash
 # Just Gradle, no Nx required
-./g tasks
-./g -p lesson01-intro hello
+./gradlew tasks
+./gradlew -p lesson01-intro hello
 ```
 
 ### 2. Full Setup (Gradle + Nx)
@@ -21,19 +21,19 @@ This is a comprehensive tutorial to learn Gradle and Kotlin step by step. The pr
 npm install
 
 # Now you can use both Gradle and Nx commands
-./g -p lesson16-nx-gradle buildAll  # Gradle commands
-npm run build                         # Nx commands
+./gradlew -p lesson16-nx-gradle buildAll  # Gradle commands
+npm run build                              # Nx commands
 ```
 
 ## Running Examples
 
 ### Using Gradle CLI (Works immediately)
-Use the `./g` script (recommended) with the `-p` flag to specify the lesson:
+Use the `./gradlew` script with the `-p` flag to specify the lesson:
 ```bash
-./g -p lesson01-intro hello              # Run a specific lesson task
-./g -p lesson02-setup build              # Build a lesson
-./g -p lesson15-image-processing run     # Run an example
-./g -p lesson16-nx-gradle buildAll       # Build Nx monorepo with Gradle
+./gradlew -p lesson01-intro hello              # Run a specific lesson task
+./gradlew -p lesson02-setup build              # Build a lesson
+./gradlew -p lesson15-image-processing run     # Run an example
+./gradlew -p lesson16-nx-gradle buildAll       # Build Nx monorepo with Gradle
 ```
 
 ### Using Nx CLI (After `npm install`)

@@ -11,7 +11,7 @@
 
 ### Launch the Interactive UI
 ```bash
-./g -p lesson15-image-processing run
+./gradlew -p lesson15-image-processing run
 ```
 This opens an interactive window where you can:
 - View and manipulate images in real-time
@@ -21,17 +21,17 @@ This opens an interactive window where you can:
 
 ### Build the Project
 ```bash
-./g -p lesson15-image-processing build
+./gradlew -p lesson15-image-processing build
 ```
 
 ### Run Tests
 ```bash
-./g -p lesson15-image-processing test
+./gradlew -p lesson15-image-processing test
 ```
 
 ### Clean and Rebuild
 ```bash
-./g -p lesson15-image-processing clean build
+./gradlew -p lesson15-image-processing clean build
 ```
 
 ## Available Effects in the UI
@@ -131,7 +131,7 @@ myPanel.add(myEffectBtn);
 
 ### Step 3: Rebuild and Test
 ```bash
-./g -p lesson15-image-processing build run
+./gradlew -p lesson15-image-processing build run
 ```
 
 ## Educational Value
@@ -156,7 +156,7 @@ For large images or real-time processing:
 
 ### UI doesn't appear
 - Ensure Java AWT/Swing is properly installed
-- Try running from terminal: `./g -p lesson15-image-processing run`
+- Try running from terminal: `./gradlew -p lesson15-image-processing run`
 
 ### Slow performance
 - Use smaller image sizes
@@ -164,7 +164,7 @@ For large images or real-time processing:
 - Run on a machine with more RAM
 
 ### Build failures
-- Clean and rebuild: `./g -p lesson15-image-processing clean build`
+- Clean and rebuild: `./gradlew -p lesson15-image-processing clean build`
 - Check Java version: `java -version` (should be 11+)
 
 ## Next Steps

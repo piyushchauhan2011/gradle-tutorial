@@ -23,10 +23,5 @@ dependencies {
 
 From the project root, run:
 ```bash
-./g -p lesson12-kotlin-consumer run
-```
-
-Alternatively:
-```bash
 ./gradlew -p lesson12-kotlin-consumer run
 ```

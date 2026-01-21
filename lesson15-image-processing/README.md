@@ -35,7 +35,7 @@ This lesson covers fundamental image processing techniques and algorithms in Jav
 
 ### Run the Interactive Swing UI (RECOMMENDED):
 ```bash
-./g -p lesson15-image-processing run
+./gradlew -p lesson15-image-processing run
 ```
 
 This launches an interactive GUI application where you can:
@@ -50,19 +50,19 @@ This launches an interactive GUI application where you can:
 
 ### Run the console demo:
 ```bash
-./g -p lesson15-image-processing run --args=demo
+./gradlew -p lesson15-image-processing run --args=demo
 ```
 
 This demonstrates various effects in the console without GUI.
 
 ### Run tests:
 ```bash
-./g -p lesson15-image-processing test
+./gradlew -p lesson15-image-processing test
 ```
 
 ### Build the project:
 ```bash
-./g -p lesson15-image-processing build
+./gradlew -p lesson15-image-processing build
 ```
 
 ## Code Structure
@@ -204,26 +204,26 @@ JButton customBtn = createButton("My Effect", e -> {
 
 ### Prerequisites
 - Java Development Kit (JDK) 11 or later
-- Gradle (included as wrapper `./g`)
+- Gradle (included as wrapper `./gradlew`)
 
 ### Build
 ```bash
-./g -p lesson15-image-processing build
+./gradlew -p lesson15-image-processing build
 ```
 
 ### Run Interactive UI
 ```bash
-./g -p lesson15-image-processing run
+./gradlew -p lesson15-image-processing run
 ```
 
 ### Run Tests
 ```bash
-./g -p lesson15-image-processing test
+./gradlew -p lesson15-image-processing test
 ```
 
 ### Run with Gradle Task
 ```bash
-./g -p lesson15-image-processing clean build test run
+./gradlew -p lesson15-image-processing clean build test run
 ```
 
 ## Notes

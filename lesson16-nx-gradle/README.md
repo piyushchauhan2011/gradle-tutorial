@@ -29,7 +29,7 @@ This will install:
 nx --version
 
 # Check Gradle version
-./g --version
+./gradlew --version
 ```
 
 ## Overview
@@ -93,24 +93,24 @@ From the project root, run these commands:
 
 ```bash
 # Build entire workspace with caching
-./g -p lesson16-nx-gradle buildAll
+./gradlew -p lesson16-nx-gradle buildAll
 
 # Run all tests
-./g -p lesson16-nx-gradle testAll
+./gradlew -p lesson16-nx-gradle testAll
 
 # View dependency graph
-./g -p lesson16-nx-gradle showDependencyGraph
+./gradlew -p lesson16-nx-gradle showDependencyGraph
 
 # Test specific project
-./g -p lesson16-nx-gradle :libs:core-utils:test
-./g -p lesson16-nx-gradle :libs:data-models:test
+./gradlew -p lesson16-nx-gradle :libs:core-utils:test
+./gradlew -p lesson16-nx-gradle :libs:data-models:test
 
 # Show info about a project
-./g -p lesson16-nx-gradle :apps:service-app:showInfo
+./gradlew -p lesson16-nx-gradle :apps:service-app:showInfo
 
 # Run specific application
-./g -p lesson16-nx-gradle :apps:cli-app:run
-./g -p lesson16-nx-gradle :apps:service-app:run
+./gradlew -p lesson16-nx-gradle :apps:cli-app:run
+./gradlew -p lesson16-nx-gradle :apps:service-app:run
 ```
 
 ### Using Nx (with npm)
@@ -215,19 +215,19 @@ Command-line tool that uses:
 
 ### When to Use Each
 
-| Tool   | Use Case                                              | Command                           |
-| ------ | ----------------------------------------------------- | --------------------------------- |
-| Gradle | Quick builds, single project, raw compilation         | `./g -p lesson16-nx-gradle build` |
-| Nx     | Monorepo scale, affected builds, caching optimization | `npm run build`                   |
-| Both   | Production monorepo with 50+ projects                 | Both together                     |
+| Tool   | Use Case                                              | Command                                |
+| ------ | ----------------------------------------------------- | -------------------------------------- |
+| Gradle | Quick builds, single project, raw compilation         | `./gradlew -p lesson16-nx-gradle build` |
+| Nx     | Monorepo scale, affected builds, caching optimization | `npm run build`                        |
+| Both   | Production monorepo with 50+ projects                 | Both together                          |
 
 ## Gradle vs Nx Commands
 
-| Operation | Gradle                                          | Nx                           |
-| --------- | ----------------------------------------------- | ---------------------------- |
-| Build all | `./g -p lesson16-nx-gradle buildAll`            | `npm run build`              |
-| Test all  | `./g -p lesson16-nx-gradle testAll`             | `npm run test`               |
-| View deps | `./g -p lesson16-nx-gradle showDependencyGraph` | `npm run dep-graph`          |
+| Operation | Gradle                                              | Nx                           |
+| --------- | --------------------------------------------------- | ---------------------------- |
+| Build all | `./gradlew -p lesson16-nx-gradle buildAll`          | `npm run build`              |
+| Test all  | `./gradlew -p lesson16-nx-gradle testAll`           | `npm run test`               |
+| View deps | `./gradlew -p lesson16-nx-gradle showDependencyGraph` | `npm run dep-graph`          |
 | Affected  | Manual tracking                                 | `nx affected --target=build` |
 | Parallel  | Limited                                         | Full parallelization         |
 
@@ -236,16 +236,16 @@ Command-line tool that uses:
 ### Using Gradle
 ```bash
 # Test all projects
-./g -p lesson16-nx-gradle testAll
+./gradlew -p lesson16-nx-gradle testAll
 
 # Test with verbose output
-./g -p lesson16-nx-gradle testAll --info
+./gradlew -p lesson16-nx-gradle testAll --info
 
 # Test specific library
-./g -p lesson16-nx-gradle :libs:core-utils:test
+./gradlew -p lesson16-nx-gradle :libs:core-utils:test
 
 # Run specific test
-./g -p lesson16-nx-gradle :libs:core-utils:test --tests StringUtilsTest.testCapitalize
+./gradlew -p lesson16-nx-gradle :libs:core-utils:test --tests StringUtilsTest.testCapitalize
 ```
 
 ### Using Nx
@@ -266,14 +266,14 @@ npm run affected:test
 ### With Gradle
 ```bash
 # First build (compiles everything)
-./g -p lesson16-nx-gradle buildAll
+./gradlew -p lesson16-nx-gradle buildAll
 
 # Second build (uses cache - instant)
-./g -p lesson16-nx-gradle buildAll
+./gradlew -p lesson16-nx-gradle buildAll
 
 # After modifying StringUtils.java:
 # Only core-utils and dependent projects rebuild
-./g -p lesson16-nx-gradle buildAll
+./gradlew -p lesson16-nx-gradle buildAll
 ```
 
 ### With Nx
@@ -293,11 +293,11 @@ npm run affected:build
 
 ## Exercises
 
-1. **Add a New Library**: Create `libs/logging` with a `Logger` class, then run `./g -p lesson16-nx-gradle buildAll`
+1. **Add a New Library**: Create `libs/logging` with a `Logger` class, then run `./gradlew -p lesson16-nx-gradle buildAll`
 2. **Add a New App**: Create `apps:admin-app` that uses core-utils, then run `nx dep-graph`
 3. **Modify Dependencies**: Have cli-app also depend on data-models using `implementation project(":libs:data-models")`
 4. **Track Affected**: Modify StringUtils.java and run `npm run affected:build` to see what rebuilds
-5. **Explore Caching**: Run `./g -p lesson16-nx-gradle buildAll` twice and observe cache behavior
+5. **Explore Caching**: Run `./gradlew -p lesson16-nx-gradle buildAll` twice and observe cache behavior
 6. **Use Nx Dashboard**: Run `npm run dep-graph` to visualize the entire dependency graph
 7. **Add Custom Tasks**: Add a workspace-level task in build.gradle and orchestrate it with Nx
 

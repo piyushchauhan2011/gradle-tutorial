@@ -17,11 +17,6 @@ Gradle is a build automation tool that uses a Groovy or Kotlin-based DSL to defi
 ## Running the Example
 From the project root:
 ```bash
-./g -p lesson01-intro hello
-```
-
-Alternatively:
-```bash
 ./gradlew -p lesson01-intro hello
 ```
 
