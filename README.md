@@ -24,5 +24,6 @@ This is a comprehensive tutorial to learn Gradle and Kotlin step by step. The pr
 10. [Lesson 10: Publishing Artifacts](lesson10-publishing/README.md)
 11. [Lesson 11: Consuming Published Artifacts](lesson11-consuming-artifacts/README.md)
 12. [Lesson 12: Kotlin Consumer App](lesson12-kotlin-consumer/README.md)
+13. [Lesson 13: Scala Consumer App](lesson13-scala-consumer/README.md)
 
 Each lesson includes runnable examples and exercises. Use `./gradlew` from the root or lesson directory to run tasks.
