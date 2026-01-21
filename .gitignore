@@ -2,6 +2,9 @@
 .gradle/
 build/
 gradle/wrapper/gradle-wrapper.jar
+*.jar
+*.war
+*.ear
 
 # Remote repo
 remote-repo/
@@ -10,6 +13,9 @@ remote-repo/
 .idea/
 *.iml
 .vscode/
+*.swp
+*.swo
+*~
 
 # OS
 .DS_Store
@@ -18,7 +24,16 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.log
+*.out
 
+# Node / npm
 node_modules/
+package-lock.json
+npm-debug.log*
 dist/
-.nx/cache
+
+# Nx
+.nx/
+.nxrc.json
+.env
+.env.local
