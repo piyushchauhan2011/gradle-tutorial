@@ -12,7 +12,8 @@ remote-repo/
 # IDE
 .idea/
 *.iml
-.vscode/
+.vscode/*.json
+!.vscode/settings.json
 *.swp
 *.swo
 *~

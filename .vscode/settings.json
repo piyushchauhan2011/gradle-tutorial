@@ -1,0 +1,14 @@
+{
+  "java.debug.settings.onBuildFailureProceed": true,
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.import.gradle.enabled": true,
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+    "editor.formatOnSave": true
+  },
+  "java.compile.nullAnalysis.mode": "automatic",
+  "files.exclude": {
+    "**/.gradle": true,
+    "**/build": false
+  }
+}

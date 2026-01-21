@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="lesson16-nx-gradle/libs/core-utils/src/main/java"/>
+	<classpathentry kind="src" path="lesson16-nx-gradle/libs/data-models/src/main/java"/>
+	<classpathentry kind="src" path="lesson16-nx-gradle/apps/service-app/src/main/java"/>
+	<classpathentry kind="src" path="lesson16-nx-gradle/apps/cli-app/src/main/java"/>
+	<classpathentry kind="lib" path="lesson16-nx-gradle/libs/core-utils/build/classes/java/main"/>
+	<classpathentry kind="lib" path="lesson16-nx-gradle/libs/data-models/build/classes/java/main"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
