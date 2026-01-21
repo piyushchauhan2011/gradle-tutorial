@@ -9,9 +9,14 @@ A Gradle project requires a `build.gradle` or `build.gradle.kts` file and option
 - `build.gradle` - Build script
 
 ## Running the Example
-From the lesson02-setup directory:
+From the project root:
 ```bash
-./gradlew build
+./g -p lesson02-setup build
+```
+
+Alternatively:
+```bash
+./gradlew -p lesson02-setup build
 ```
 
 This compiles the Java code and creates JARs.

@@ -8,8 +8,14 @@ Build scripts define tasks and configurations. Tasks are units of work with acti
 - Kotlin: `tasks.register("myTask") { doLast { ... } }`
 
 ## Running the Example
+From the project root:
 ```bash
-./gradlew customTask
+./g -p lesson03-build-script customTask
+```
+
+Alternatively:
+```bash
+./gradlew -p lesson03-build-script customTask
 ```
 
 ## Exercise Solution
@@ -33,4 +39,4 @@ tasks.register("dependentTask") {
 }
 ```
 
-Run `./gradlew dependentTask`.
+Run `./g -p lesson03-build-script dependentTask` from the project root.

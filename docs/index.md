@@ -6,13 +6,29 @@ This tutorial guides you through learning Gradle, a powerful build automation to
 ## Structure
 - **Lessons**: Step-by-step guides with theory, examples, and exercises.
 - **DSLs**: Both Groovy (.gradle) and Kotlin (.gradle.kts) versions provided.
-- **Runnable Examples**: Execute with `./gradlew <task>`.
+- **Runnable Examples**: Execute with `./g -p <lesson-name> <task>` from the root.
 - **Exercises**: Hands-on tasks to practice concepts.
 
 ## Getting Started
 1. Ensure Java is installed.
-2. Run `./gradlew tasks` from the root.
+2. Run `./g tasks` from the root.
 3. Start with Lesson 1 and progress sequentially.
+
+## Running Examples
+All examples run from the project root using:
+```bash
+./g -p <lesson-name> <task>
+```
+
+For example:
+- `./g -p lesson01-intro hello`
+- `./g -p lesson05-dependencies test`
+- `./g -p lesson15-image-processing run`
+
+Alternatively, use the traditional Gradle wrapper:
+```bash
+./gradlew -p <lesson-name> <task>
+```
 
 ## Resources
 - [Gradle User Manual](https://docs.gradle.org/current/userguide/)

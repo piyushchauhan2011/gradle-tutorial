@@ -22,4 +22,12 @@ dependencies {
 }
 ```
 
-Run `./gradlew run` after publishing the library.
+From the project root, run:
+```bash
+./g -p lesson11-consuming-artifacts run
+```
+
+Alternatively:
+```bash
+./gradlew -p lesson11-consuming-artifacts run
+```
