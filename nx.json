@@ -15,6 +15,16 @@
       }
     }
   },
+  "plugins": [
+    {
+      "plugin": "@nx/gradle",
+      "options": {
+        "testTargetName": "test",
+        "buildTargetName": "build",
+        "classesTargetName": "classes"
+      }
+    }
+  ],
   "targetDefaults": {
     "build": {
       "cache": true

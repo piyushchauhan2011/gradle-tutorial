@@ -2,15 +2,26 @@
   "version": "6.0",
   "nxVersion": "18.3.5",
   "deps": {
-    "nx": "^18.0.0"
+    "nx": "^18.0.0",
+    "@nx/gradle": "^18.0.0"
   },
   "pathMappings": {},
-  "nxJsonPlugins": [],
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/gradle",
+      "version": "^18.0.0",
+      "options": {
+        "testTargetName": "test",
+        "buildTargetName": "build",
+        "classesTargetName": "classes"
+      }
+    }
+  ],
   "fileMap": {
     "nonProjectFiles": [
       {
         "file": ".gitignore",
-        "hash": "7781330372141654337"
+        "hash": "13024743244550575625"
       },
       {
         "file": ".nxrc.json",
@@ -23,6 +34,10 @@
       {
         "file": "README.md",
         "hash": "9064983136918549438"
+      },
+      {
+        "file": "build.gradle",
+        "hash": "5911490230765617492"
       },
       {
         "file": "docs/index.md",
@@ -86,15 +101,15 @@
       },
       {
         "file": "gradle/wrapper/gradle-wrapper.properties",
-        "hash": "3425251049795543492"
+        "hash": "6992607940248896982"
       },
       {
         "file": "gradlew",
-        "hash": "17943443071939567981"
+        "hash": "6979324130797723579"
       },
       {
         "file": "gradlew.bat",
-        "hash": "817488907035231906"
+        "hash": "8837338129170646035"
       },
       {
         "file": "lesson01-intro/README.md",
@@ -334,15 +349,15 @@
       },
       {
         "file": "nx.json",
-        "hash": "6545840753035428910"
+        "hash": "7407855747389936288"
       },
       {
         "file": "package-lock.json",
-        "hash": "14348783619504141769"
+        "hash": "7968221886126224287"
       },
       {
         "file": "package.json",
-        "hash": "7023440172960787682"
+        "hash": "15787908822583027069"
       },
       {
         "file": "settings.gradle",

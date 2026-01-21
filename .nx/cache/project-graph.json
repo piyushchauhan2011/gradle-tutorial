@@ -210,6 +210,15 @@
         "hash": "sha512-mo5j5X+jIZmJQveBKeS/clAueipV7KgiX1vMgCxam1RNYiqE1w62n0/tJJnHtjW8ZHcQco5gY85jA3mi0L+nSA=="
       }
     },
+    "npm:@nrwl/devkit": {
+      "type": "npm",
+      "name": "npm:@nrwl/devkit",
+      "data": {
+        "version": "18.3.5",
+        "packageName": "@nrwl/devkit",
+        "hash": "sha512-DIvChKMe4q8CtIsbrumL/aYgf85H5vlT6eF3jnCCWORj6LTwoHtK8Q9ky1+uM82KIM0gaKd32NVDw+w64scHyg=="
+      }
+    },
     "npm:@nrwl/tao": {
       "type": "npm",
       "name": "npm:@nrwl/tao",
@@ -217,6 +226,24 @@
         "version": "18.3.5",
         "packageName": "@nrwl/tao",
         "hash": "sha512-gB7Vxa6FReZZEGva03Eh+84W8BSZOjsNyXboglOINu6d8iZZ0eotSXGziKgjpkj3feZ1ofKZMs0PRObVAOROVw=="
+      }
+    },
+    "npm:@nx/devkit": {
+      "type": "npm",
+      "name": "npm:@nx/devkit",
+      "data": {
+        "version": "18.3.5",
+        "packageName": "@nx/devkit",
+        "hash": "sha512-9I0L17t0MN87fL4m4MjDiBxJIx7h5RQY/pTYtt5TBjye0ANb165JeE4oh3ibzfjMzXv42Aej2Gm+cOuSPwzT9g=="
+      }
+    },
+    "npm:@nx/gradle": {
+      "type": "npm",
+      "name": "npm:@nx/gradle",
+      "data": {
+        "version": "18.3.5",
+        "packageName": "@nx/gradle",
+        "hash": "sha512-tIVxHjuq4azHk63rvdz7g1VNv04FgdlmhAmM6Nm7VbPLtPTol22AklmJvCz0v+dugrJA0y1VzW1VRPkyGu+m9w=="
       }
     },
     "npm:@nx/nx-darwin-arm64": {
@@ -415,6 +442,15 @@
         "version": "5.2.0",
         "packageName": "ansi-styles",
         "hash": "sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA=="
+      }
+    },
+    "npm:async": {
+      "type": "npm",
+      "name": "npm:async",
+      "data": {
+        "version": "3.2.6",
+        "packageName": "async",
+        "hash": "sha512-htCUDlxyyCLMgaM3xXg0C0LW2xqfuQ6p05pCEIsXuyQ+a1koYKTuBMzRNwmybfLgvJDMd0r1LTn4+E0Ti6C2AA=="
       }
     },
     "npm:asynckit": {
@@ -633,6 +669,15 @@
         "hash": "sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg=="
       }
     },
+    "npm:ejs": {
+      "type": "npm",
+      "name": "npm:ejs",
+      "data": {
+        "version": "3.1.10",
+        "packageName": "ejs",
+        "hash": "sha512-UeJmFfOrAQS8OJWPZ4qtgHyWExa088/MtK5UEyoJGFH67cDEXkZSviOiKRCZ4Xij0zxI3JECgYs3oKx+AizQBA=="
+      }
+    },
     "npm:emoji-regex": {
       "type": "npm",
       "name": "npm:emoji-regex",
@@ -730,6 +775,33 @@
         "version": "3.2.0",
         "packageName": "figures",
         "hash": "sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg=="
+      }
+    },
+    "npm:filelist": {
+      "type": "npm",
+      "name": "npm:filelist",
+      "data": {
+        "version": "1.0.4",
+        "packageName": "filelist",
+        "hash": "sha512-w1cEuf3S+DrLCQL7ET6kz+gmlJdbq9J7yXCSjK/OZCPA+qEN1WyF4ZAf0YYJa4/shHJra2t/d/r8SV4Ji+x+8Q=="
+      }
+    },
+    "npm:minimatch@5.1.6": {
+      "type": "npm",
+      "name": "npm:minimatch@5.1.6",
+      "data": {
+        "version": "5.1.6",
+        "packageName": "minimatch",
+        "hash": "sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g=="
+      }
+    },
+    "npm:minimatch": {
+      "type": "npm",
+      "name": "npm:minimatch",
+      "data": {
+        "version": "9.0.3",
+        "packageName": "minimatch",
+        "hash": "sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg=="
       }
     },
     "npm:flat": {
@@ -939,6 +1011,15 @@
         "hash": "sha512-fKzAra0rGJUUBwGBgNkHZuToZcn+TtXHpeCgmkMJMMYx1sQDYaCSyjJBSCa2nH1DGm7s3n1oBnohoVTBaN7Lww=="
       }
     },
+    "npm:jake": {
+      "type": "npm",
+      "name": "npm:jake",
+      "data": {
+        "version": "10.9.4",
+        "packageName": "jake",
+        "hash": "sha512-wpHYzhxiVQL+IV05BLE2Xn34zW1S223hvjtqk0+gsPrwd/8JNLXJgZZM/iPFsYc1xyphF+6M6EvdE5E9MBGkDA=="
+      }
+    },
     "npm:jest-diff": {
       "type": "npm",
       "name": "npm:jest-diff",
@@ -1038,15 +1119,6 @@
         "hash": "sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg=="
       }
     },
-    "npm:minimatch": {
-      "type": "npm",
-      "name": "npm:minimatch",
-      "data": {
-        "version": "9.0.3",
-        "packageName": "minimatch",
-        "hash": "sha512-RHiac9mvaRw0x3AYRgDC1CxAP7HTcNrrECeA8YYJeWnpo+2Q5CegtZjaotWTWxDG3UeGA1coE05iH1mPjT/2mg=="
-      }
-    },
     "npm:minimist": {
       "type": "npm",
       "name": "npm:minimist",
@@ -1126,6 +1198,15 @@
         "version": "3.1.1",
         "packageName": "path-key",
         "hash": "sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q=="
+      }
+    },
+    "npm:picocolors": {
+      "type": "npm",
+      "name": "npm:picocolors",
+      "data": {
+        "version": "1.1.1",
+        "packageName": "picocolors",
+        "hash": "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA=="
       }
     },
     "npm:pretty-format": {
@@ -1403,6 +1484,13 @@
         "type": "static"
       }
     ],
+    "npm:@nrwl/devkit": [
+      {
+        "source": "npm:@nrwl/devkit",
+        "target": "npm:@nx/devkit",
+        "type": "static"
+      }
+    ],
     "npm:@nrwl/tao": [
       {
         "source": "npm:@nrwl/tao",
@@ -1412,6 +1500,60 @@
       {
         "source": "npm:@nrwl/tao",
         "target": "npm:tslib",
+        "type": "static"
+      }
+    ],
+    "npm:@nx/devkit": [
+      {
+        "source": "npm:@nx/devkit",
+        "target": "npm:nx",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nx/devkit",
+        "target": "npm:@nrwl/devkit",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nx/devkit",
+        "target": "npm:ejs",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nx/devkit",
+        "target": "npm:enquirer",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nx/devkit",
+        "target": "npm:ignore",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nx/devkit",
+        "target": "npm:semver",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nx/devkit",
+        "target": "npm:tmp",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nx/devkit",
+        "target": "npm:tslib",
+        "type": "static"
+      },
+      {
+        "source": "npm:@nx/devkit",
+        "target": "npm:yargs-parser",
+        "type": "static"
+      }
+    ],
+    "npm:@nx/gradle": [
+      {
+        "source": "npm:@nx/gradle",
+        "target": "npm:@nx/devkit",
         "type": "static"
       }
     ],
@@ -1599,6 +1741,13 @@
         "type": "static"
       }
     ],
+    "npm:ejs": [
+      {
+        "source": "npm:ejs",
+        "target": "npm:jake",
+        "type": "static"
+      }
+    ],
     "npm:end-of-stream": [
       {
         "source": "npm:end-of-stream",
@@ -1646,6 +1795,20 @@
       {
         "source": "npm:figures",
         "target": "npm:escape-string-regexp",
+        "type": "static"
+      }
+    ],
+    "npm:filelist": [
+      {
+        "source": "npm:filelist",
+        "target": "npm:minimatch@5.1.6",
+        "type": "static"
+      }
+    ],
+    "npm:minimatch@5.1.6": [
+      {
+        "source": "npm:minimatch@5.1.6",
+        "target": "npm:brace-expansion",
         "type": "static"
       }
     ],
@@ -1775,6 +1938,23 @@
       {
         "source": "npm:is-wsl",
         "target": "npm:is-docker",
+        "type": "static"
+      }
+    ],
+    "npm:jake": [
+      {
+        "source": "npm:jake",
+        "target": "npm:async",
+        "type": "static"
+      },
+      {
+        "source": "npm:jake",
+        "target": "npm:filelist",
+        "type": "static"
+      },
+      {
+        "source": "npm:jake",
+        "target": "npm:picocolors",
         "type": "static"
       }
     ],
