@@ -8,9 +8,7 @@
   "defaultProject": "lesson16-nx-gradle",
   "tasksRunnerOptions": {
     "default": {
-      "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "test", "compile", "check"],
         "executionTimeout": 300
       }
     }
@@ -27,10 +25,30 @@
   ],
   "targetDefaults": {
     "build": {
-      "cache": true
+      "cache": true,
+      "inputs": [
+        "production",
+        "^production"
+      ]
     },
     "test": {
       "cache": true
+    },
+    "compile": {
+      "cache": true
+    },
+    "check": {
+      "cache": true
     }
+  },
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "sharedGlobals": [],
+    "production": [
+      "default"
+    ]
   }
 }
