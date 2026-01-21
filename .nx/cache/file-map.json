@@ -1,0 +1,473 @@
+{
+  "version": "6.0",
+  "nxVersion": "18.3.5",
+  "deps": {
+    "nx": "^18.0.0"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".gitignore",
+        "hash": "7781330372141654337"
+      },
+      {
+        "file": ".nxrc.json",
+        "hash": "2736822870363047732"
+      },
+      {
+        "file": "NX_SETUP.md",
+        "hash": "6929767873716849958"
+      },
+      {
+        "file": "README.md",
+        "hash": "9064983136918549438"
+      },
+      {
+        "file": "docs/index.md",
+        "hash": "17371943075280548279"
+      },
+      {
+        "file": "docs/lesson-01.md",
+        "hash": "967127785917254753"
+      },
+      {
+        "file": "docs/lesson-02.md",
+        "hash": "15738337704307362411"
+      },
+      {
+        "file": "docs/lesson-03.md",
+        "hash": "9451358946811822380"
+      },
+      {
+        "file": "docs/lesson-04.md",
+        "hash": "17652633300122692803"
+      },
+      {
+        "file": "docs/lesson-05.md",
+        "hash": "5930714437085459094"
+      },
+      {
+        "file": "docs/lesson-06.md",
+        "hash": "10485672256308361998"
+      },
+      {
+        "file": "docs/lesson-07.md",
+        "hash": "15487649635243761081"
+      },
+      {
+        "file": "docs/lesson-08.md",
+        "hash": "15487385579303110822"
+      },
+      {
+        "file": "docs/lesson-09.md",
+        "hash": "13562921607288463214"
+      },
+      {
+        "file": "docs/lesson-10.md",
+        "hash": "2431505369076204523"
+      },
+      {
+        "file": "docs/lesson-11.md",
+        "hash": "10358014423508779320"
+      },
+      {
+        "file": "docs/lesson-12.md",
+        "hash": "8577932887386086025"
+      },
+      {
+        "file": "docs/lesson-13.md",
+        "hash": "649269982528511078"
+      },
+      {
+        "file": "g",
+        "hash": "1675283604721108471"
+      },
+      {
+        "file": "gradle/wrapper/gradle-wrapper.properties",
+        "hash": "3425251049795543492"
+      },
+      {
+        "file": "gradlew",
+        "hash": "17943443071939567981"
+      },
+      {
+        "file": "gradlew.bat",
+        "hash": "817488907035231906"
+      },
+      {
+        "file": "lesson01-intro/README.md",
+        "hash": "8964882791726528527"
+      },
+      {
+        "file": "lesson01-intro/build.gradle",
+        "hash": "786741863196814794"
+      },
+      {
+        "file": "lesson01-intro/build.gradle.kts",
+        "hash": "18078523653896020940"
+      },
+      {
+        "file": "lesson02-setup/README.md",
+        "hash": "13025662692333888756"
+      },
+      {
+        "file": "lesson02-setup/build.gradle",
+        "hash": "2842689483312664751"
+      },
+      {
+        "file": "lesson02-setup/build.gradle.kts",
+        "hash": "16900936372892057921"
+      },
+      {
+        "file": "lesson02-setup/src/main/java/Hello.java",
+        "hash": "13279145029563416785"
+      },
+      {
+        "file": "lesson03-build-script/README.md",
+        "hash": "7803490050088914929"
+      },
+      {
+        "file": "lesson03-build-script/build.gradle",
+        "hash": "16269386870447021172"
+      },
+      {
+        "file": "lesson03-build-script/build.gradle.kts",
+        "hash": "15369401923099702235"
+      },
+      {
+        "file": "lesson04-tasks/README.md",
+        "hash": "4036422690845930809"
+      },
+      {
+        "file": "lesson04-tasks/build.gradle",
+        "hash": "18188832787961783384"
+      },
+      {
+        "file": "lesson04-tasks/build.gradle.kts",
+        "hash": "2073254036729050231"
+      },
+      {
+        "file": "lesson05-dependencies/README.md",
+        "hash": "13514616085419734939"
+      },
+      {
+        "file": "lesson05-dependencies/build.gradle",
+        "hash": "112228099038970539"
+      },
+      {
+        "file": "lesson05-dependencies/build.gradle.kts",
+        "hash": "8147642408739893848"
+      },
+      {
+        "file": "lesson05-dependencies/src/main/java/Calculator.java",
+        "hash": "13932778498297910902"
+      },
+      {
+        "file": "lesson05-dependencies/src/test/java/CalculatorTest.java",
+        "hash": "16894154059242800573"
+      },
+      {
+        "file": "lesson06-plugins/README.md",
+        "hash": "17609729695358633123"
+      },
+      {
+        "file": "lesson06-plugins/build.gradle",
+        "hash": "15078085568024199640"
+      },
+      {
+        "file": "lesson06-plugins/build.gradle.kts",
+        "hash": "10656608063744856266"
+      },
+      {
+        "file": "lesson06-plugins/src/main/java/App.java",
+        "hash": "18140600188008623628"
+      },
+      {
+        "file": "lesson07-multi-module/README.md",
+        "hash": "8660295779764768137"
+      },
+      {
+        "file": "lesson07-multi-module/build.gradle",
+        "hash": "15965923886954850815"
+      },
+      {
+        "file": "lesson07-multi-module/build.gradle.kts",
+        "hash": "7910070588869775028"
+      },
+      {
+        "file": "lesson08-testing/README.md",
+        "hash": "7664436174105086140"
+      },
+      {
+        "file": "lesson08-testing/build.gradle",
+        "hash": "11314722738845135254"
+      },
+      {
+        "file": "lesson08-testing/build.gradle.kts",
+        "hash": "10340320659105833403"
+      },
+      {
+        "file": "lesson08-testing/src/main/java/Calculator.java",
+        "hash": "13932778498297910902"
+      },
+      {
+        "file": "lesson08-testing/src/test/java/CalculatorTest.java",
+        "hash": "16894154059242800573"
+      },
+      {
+        "file": "lesson09-custom-tasks/README.md",
+        "hash": "16518640205330968587"
+      },
+      {
+        "file": "lesson09-custom-tasks/build.gradle",
+        "hash": "14863540578988264089"
+      },
+      {
+        "file": "lesson09-custom-tasks/build.gradle.kts",
+        "hash": "10566908106770219794"
+      },
+      {
+        "file": "lesson10-publishing/README.md",
+        "hash": "12024301309305188285"
+      },
+      {
+        "file": "lesson10-publishing/build.gradle",
+        "hash": "2115631105878834363"
+      },
+      {
+        "file": "lesson10-publishing/build.gradle.kts",
+        "hash": "18285696357262717637"
+      },
+      {
+        "file": "lesson10-publishing/src/main/java/com/example/Library.java",
+        "hash": "16842488523573827756"
+      },
+      {
+        "file": "lesson11-consuming-artifacts/README.md",
+        "hash": "5102253150844789547"
+      },
+      {
+        "file": "lesson11-consuming-artifacts/build.gradle",
+        "hash": "17675417107034753281"
+      },
+      {
+        "file": "lesson11-consuming-artifacts/build.gradle.kts",
+        "hash": "10881928995086779035"
+      },
+      {
+        "file": "lesson11-consuming-artifacts/src/main/java/Main.java",
+        "hash": "17025869196128134625"
+      },
+      {
+        "file": "lesson12-kotlin-consumer/README.md",
+        "hash": "15250359178649667829"
+      },
+      {
+        "file": "lesson12-kotlin-consumer/build.gradle",
+        "hash": "3489696861487103105"
+      },
+      {
+        "file": "lesson12-kotlin-consumer/build.gradle.kts",
+        "hash": "18335939216220553509"
+      },
+      {
+        "file": "lesson12-kotlin-consumer/src/main/kotlin/Main.kt",
+        "hash": "3406659405254799355"
+      },
+      {
+        "file": "lesson13-scala-consumer/README.md",
+        "hash": "3341482315163734654"
+      },
+      {
+        "file": "lesson13-scala-consumer/build.gradle",
+        "hash": "7687271392771347606"
+      },
+      {
+        "file": "lesson13-scala-consumer/build.gradle.kts",
+        "hash": "5080721354260145425"
+      },
+      {
+        "file": "lesson13-scala-consumer/src/main/scala/Main.scala",
+        "hash": "5534637509610481362"
+      },
+      {
+        "file": "lesson14-swing-gui/README.md",
+        "hash": "5427743587295794824"
+      },
+      {
+        "file": "lesson14-swing-gui/build.gradle",
+        "hash": "6415718089279960216"
+      },
+      {
+        "file": "lesson14-swing-gui/build.gradle.kts",
+        "hash": "812846030552222405"
+      },
+      {
+        "file": "lesson14-swing-gui/src/main/java/SwingApp.java",
+        "hash": "13104325117227378776"
+      },
+      {
+        "file": "lesson15-image-processing/QUICKSTART.md",
+        "hash": "4685390447454076435"
+      },
+      {
+        "file": "lesson15-image-processing/README.md",
+        "hash": "14865337290277285036"
+      },
+      {
+        "file": "lesson15-image-processing/build.gradle",
+        "hash": "14609885939224988760"
+      },
+      {
+        "file": "lesson15-image-processing/build.gradle.kts",
+        "hash": "10190941995812277198"
+      },
+      {
+        "file": "lesson15-image-processing/src/main/java/ImageProcessingUI.java",
+        "hash": "15047066915824614537"
+      },
+      {
+        "file": "lesson15-image-processing/src/test/java/ImageProcessingTest.java",
+        "hash": "2423122536850369851"
+      },
+      {
+        "file": "nx.json",
+        "hash": "6545840753035428910"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "14348783619504141769"
+      },
+      {
+        "file": "package.json",
+        "hash": "7023440172960787682"
+      },
+      {
+        "file": "settings.gradle",
+        "hash": "1894996043684543436"
+      }
+    ],
+    "projectFileMap": {
+      "apps-cli-app": [
+        {
+          "file": "lesson16-nx-gradle/apps/cli-app/build.gradle",
+          "hash": "14046201102581967536"
+        },
+        {
+          "file": "lesson16-nx-gradle/apps/cli-app/build.gradle.kts",
+          "hash": "13711565404871427228"
+        },
+        {
+          "file": "lesson16-nx-gradle/apps/cli-app/project.json",
+          "hash": "14727273235999325167"
+        },
+        {
+          "file": "lesson16-nx-gradle/apps/cli-app/src/main/java/CliApp.java",
+          "hash": "14886194817598243661"
+        },
+        {
+          "file": "lesson16-nx-gradle/apps/cli-app/src/test/java/CliAppTest.java",
+          "hash": "8536354896645687873"
+        }
+      ],
+      "apps-service-app": [
+        {
+          "file": "lesson16-nx-gradle/apps/service-app/build.gradle",
+          "hash": "4214780120706611094"
+        },
+        {
+          "file": "lesson16-nx-gradle/apps/service-app/build.gradle.kts",
+          "hash": "7480266404078355825"
+        },
+        {
+          "file": "lesson16-nx-gradle/apps/service-app/project.json",
+          "hash": "18049996700012663448"
+        },
+        {
+          "file": "lesson16-nx-gradle/apps/service-app/src/main/java/ServiceApp.java",
+          "hash": "9510495203497302334"
+        },
+        {
+          "file": "lesson16-nx-gradle/apps/service-app/src/test/java/ServiceAppTest.java",
+          "hash": "6769720434917624990"
+        }
+      ],
+      "lesson16-nx-gradle": [
+        {
+          "file": "lesson16-nx-gradle/README.md",
+          "hash": "1757838629818374451"
+        },
+        {
+          "file": "lesson16-nx-gradle/build.gradle",
+          "hash": "13880332954321218756"
+        },
+        {
+          "file": "lesson16-nx-gradle/build.gradle.kts",
+          "hash": "11147315848316367519"
+        },
+        {
+          "file": "lesson16-nx-gradle/nx.json",
+          "hash": "13118237645618594795"
+        },
+        {
+          "file": "lesson16-nx-gradle/project.json",
+          "hash": "14543890832807538596"
+        },
+        {
+          "file": "lesson16-nx-gradle/settings.gradle",
+          "hash": "9865241837803659093"
+        },
+        {
+          "file": "lesson16-nx-gradle/settings.gradle.kts",
+          "hash": "3550605690903743505"
+        }
+      ],
+      "libs-data-models": [
+        {
+          "file": "lesson16-nx-gradle/libs/data-models/build.gradle",
+          "hash": "6178371279674900510"
+        },
+        {
+          "file": "lesson16-nx-gradle/libs/data-models/build.gradle.kts",
+          "hash": "179682233261804989"
+        },
+        {
+          "file": "lesson16-nx-gradle/libs/data-models/project.json",
+          "hash": "13179071597337066764"
+        },
+        {
+          "file": "lesson16-nx-gradle/libs/data-models/src/main/java/User.java",
+          "hash": "9999060672887148869"
+        },
+        {
+          "file": "lesson16-nx-gradle/libs/data-models/src/test/java/UserTest.java",
+          "hash": "13046832763343965522"
+        }
+      ],
+      "libs-core-utils": [
+        {
+          "file": "lesson16-nx-gradle/libs/core-utils/build.gradle",
+          "hash": "7941074945460339812"
+        },
+        {
+          "file": "lesson16-nx-gradle/libs/core-utils/build.gradle.kts",
+          "hash": "4091727937910921597"
+        },
+        {
+          "file": "lesson16-nx-gradle/libs/core-utils/project.json",
+          "hash": "11530576552039567692"
+        },
+        {
+          "file": "lesson16-nx-gradle/libs/core-utils/src/main/java/StringUtils.java",
+          "hash": "14174808510321299068"
+        },
+        {
+          "file": "lesson16-nx-gradle/libs/core-utils/src/test/java/StringUtilsTest.java",
+          "hash": "391125081726481726"
+        }
+      ]
+    }
+  }
+}

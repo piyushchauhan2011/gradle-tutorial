@@ -82,13 +82,13 @@ gradle-tutorial/
 
 ## Commands Comparison
 
-| Task | Gradle (`./g`) | Nx (`npm run`) |
-|------|---|---|
-| Build all | `./g -p lesson16-nx-gradle buildAll` | `npm run build` |
-| Test all | `./g -p lesson16-nx-gradle testAll` | `npm run test` |
-| Dependency graph | `./g -p lesson16-nx-gradle showDependencyGraph` | `npm run dep-graph` |
-| Affected build | Manual | `npm run affected:build` |
-| Affected test | Manual | `npm run affected:test` |
+| Task             | Gradle (`./g`)                                  | Nx (`npm run`)           |
+| ---------------- | ----------------------------------------------- | ------------------------ |
+| Build all        | `./g -p lesson16-nx-gradle buildAll`            | `npm run build`          |
+| Test all         | `./g -p lesson16-nx-gradle testAll`             | `npm run test`           |
+| Dependency graph | `./g -p lesson16-nx-gradle showDependencyGraph` | `npm run dep-graph`      |
+| Affected build   | Manual                                          | `npm run affected:build` |
+| Affected test    | Manual                                          | `npm run affected:test`  |
 
 ## When to Use Each
 

@@ -210,21 +210,21 @@ Command-line tool that uses:
 
 ### When to Use Each
 
-| Tool | Use Case | Command |
-|------|----------|---------|
-| Gradle | Quick builds, single project, raw compilation | `./g -p lesson16-nx-gradle build` |
-| Nx | Monorepo scale, affected builds, caching optimization | `npm run build` |
-| Both | Production monorepo with 50+ projects | Both together |
+| Tool   | Use Case                                              | Command                           |
+| ------ | ----------------------------------------------------- | --------------------------------- |
+| Gradle | Quick builds, single project, raw compilation         | `./g -p lesson16-nx-gradle build` |
+| Nx     | Monorepo scale, affected builds, caching optimization | `npm run build`                   |
+| Both   | Production monorepo with 50+ projects                 | Both together                     |
 
 ## Gradle vs Nx Commands
 
-| Operation | Gradle | Nx |
-|-----------|--------|-----|
-| Build all | `./g -p lesson16-nx-gradle buildAll` | `npm run build` |
-| Test all | `./g -p lesson16-nx-gradle testAll` | `npm run test` |
-| View deps | `./g -p lesson16-nx-gradle showDependencyGraph` | `npm run dep-graph` |
-| Affected | Manual tracking | `nx affected --target=build` |
-| Parallel | Limited | Full parallelization |
+| Operation | Gradle                                          | Nx                           |
+| --------- | ----------------------------------------------- | ---------------------------- |
+| Build all | `./g -p lesson16-nx-gradle buildAll`            | `npm run build`              |
+| Test all  | `./g -p lesson16-nx-gradle testAll`             | `npm run test`               |
+| View deps | `./g -p lesson16-nx-gradle showDependencyGraph` | `npm run dep-graph`          |
+| Affected  | Manual tracking                                 | `nx affected --target=build` |
+| Parallel  | Limited                                         | Full parallelization         |
 
 ## Testing
 

@@ -15,10 +15,7 @@
     "affected:dep-graph": "nx affected:dep-graph"
   },
   "devDependencies": {
-    "@nrwl/cli": "latest",
-    "@nrwl/workspace": "latest",
-    "@nrwl/gradle": "latest",
-    "nx": "latest"
+    "nx": "^18.0.0"
   },
   "engines": {
     "node": ">=16.0.0",
