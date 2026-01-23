@@ -1,15 +1,17 @@
 {
-  "name": "gradle-tutorial-nx",
+  "name": "lesson16-nx-gradle",
   "version": "1.0.0",
-  "description": "Comprehensive Gradle tutorial with Nx monorepo management",
+  "description": "Nx + Gradle multi-module monorepo tutorial",
   "private": true,
+  "packageManager": "pnpm@8.15.0",
   "scripts": {
     "nx": "nx",
-    "start": "nx serve",
-    "build": "./gradlew -p lesson16-nx-gradle buildAll",
-    "test": "./gradlew -p lesson16-nx-gradle testAll",
-    "lint": "npx nx show projects",
+    "build": "./gradlew buildAll",
+    "test": "./gradlew testAll",
+    "clean": "./gradlew cleanAll",
+    "lint": "nx show projects",
     "dep-graph": "nx dep-graph",
+    "graph": "nx graph",
     "projects": "nx show projects",
     "affected:build": "nx affected --target=build",
     "affected:test": "nx affected --target=test",
@@ -21,6 +23,6 @@
   },
   "engines": {
     "node": ">=16.0.0",
-    "npm": ">=8.0.0"
+    "pnpm": ">=8.0.0"
   }
 }

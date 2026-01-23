@@ -3,9 +3,9 @@
   "version": 2,
   "cli": {
     "analytics": false,
-    "packageManager": "npm"
+    "packageManager": "pnpm"
   },
-  "defaultProject": "lesson16-nx-gradle",
+  "defaultProject": "apps-cli-app",
   "tasksRunnerOptions": {
     "default": {
       "options": {

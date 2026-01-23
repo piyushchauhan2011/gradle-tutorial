@@ -1,12 +1,17 @@
 // Lesson 16: Nx with Gradle - Root Build Script (Groovy DSL)
 // Demonstrates Nx integration for workspace management, caching, and task orchestration
 
+plugins {
+    id("dev.nx.gradle.project-graph") version("+")
+}
+
 // Root project is a container project - no Java plugin needed here
 // All Java code is in subprojects (apps/* and libs/*)
 
 // Common configuration for all subprojects
 subprojects {
     apply plugin: 'java'
+    apply plugin: 'dev.nx.gradle.project-graph'
     
     java {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -63,7 +68,12 @@ tasks.register('showDependencyGraph') {
           - core-utils (Shared utilities)
           - data-models (Shared data structures)
         
-        Run: ./gradlew -p lesson16-nx-gradle showDependencyGraph
+        Run: ./gradlew showDependencyGraph
         """
     }
+}
+
+// Nx project report task
+tasks.register("projectReport") {
+    dependsOn("nxProjectReport")
 }

@@ -1,22 +1,22 @@
-# Lesson 16: Nx with Gradle
+# Lesson 16: Nx + Gradle Multi-Module Monorepo
+
+This lesson demonstrates a proper multi-module Gradle project with Nx and pnpm workspaces integration.
 
 ## Prerequisites
 
 - Java JDK 11+ (for Gradle)
-- Node.js 16+ and npm 8+ (for Nx)
-
-> **Note for VS Code users**: This is a nested Gradle project. If VS Code doesn't recognize Java files, see [VSCODE_SETUP.md](./VSCODE_SETUP.md) for setup instructions.
+- Node.js 16+ and pnpm 8+ (for Nx and pnpm workspaces)
 
 ## Setup
 
-### 1. Install Nx globally (optional)
+### 1. Install pnpm (if not installed)
 ```bash
-npm install -g nx
+npm install -g pnpm
 ```
 
 ### 2. Install workspace dependencies
 ```bash
-npm install
+pnpm install
 ```
 
 This will install:
@@ -26,45 +26,114 @@ This will install:
 ### 3. Verify setup
 ```bash
 # Check Nx version
-nx --version
+npx nx --version
 
 # Check Gradle version
 ./gradlew --version
 ```
 
-## Overview
-
-This lesson demonstrates how to use **Nx** principles with Gradle to manage a scalable monorepo workspace. Nx provides:
-
-- **Workspace Organization**: Clear separation of apps and libs
-- **Dependency Management**: Explicit project dependencies
-- **Build Caching**: Efficient incremental builds
-- **Task Orchestration**: Coordinated task execution across the workspace
-
 ## Workspace Structure
+
+This is a **multi-module Gradle project** where `apps` and `libs` are direct subprojects:
 
 ```
 lesson16-nx-gradle/
 ├── apps/
-│   ├── service-app/      (REST API server)
-│   └── cli-app/          (Command-line interface)
+│   ├── cli-app/          # Command-line interface
+│   └── service-app/      # REST API server
 ├── libs/
-│   ├── core-utils/       (Shared utilities - StringUtils)
-│   └── data-models/      (Shared models - User)
-├── build.gradle
-├── build.gradle.kts
-├── settings.gradle
-└── settings.gradle.kts
+│   ├── core-utils/       # Shared utilities
+│   └── data-models/      # Shared data structures
+├── build.gradle          # Root build script
+├── settings.gradle       # Project structure definition
+├── package.json          # pnpm workspace config
+├── pnpm-workspace.yaml   # pnpm workspace definition
+└── nx.json               # Nx configuration
 ```
 
-## Key Concepts
+## Key Features
 
-### 1. Monorepo Organization
-- **Apps**: Executable applications (service-app, cli-app)
-- **Libs**: Reusable libraries (core-utils, data-models)
-- Clear architectural boundaries
+### 1. Multi-Module Gradle Project
+- `apps/` and `libs/` are direct Gradle subprojects
+- No nested project structure
+- Clean separation of concerns
 
-### 2. Project Dependencies
+### 2. pnpm Workspaces
+- Monorepo package management with pnpm
+- Workspace defined in `pnpm-workspace.yaml`
+- Shared dependencies across apps and libs
+
+### 3. Nx Integration
+- Nx for task orchestration and caching
+- Gradle for actual builds and compilation
+- Best of both worlds
+
+## Running Examples
+
+### Using Gradle (Direct)
+
+```bash
+# Build all projects
+./gradlew buildAll
+
+# Test all projects
+./gradlew testAll
+
+# Clean all projects
+./gradlew cleanAll
+
+# Show dependency graph
+./gradlew showDependencyGraph
+
+# Build specific project
+./gradlew :apps:cli-app:build
+./gradlew :libs:core-utils:build
+
+# Test specific project
+./gradlew :apps:service-app:test
+./gradlew :libs:data-models:test
+```
+
+### Using Nx (via pnpm)
+
+```bash
+# Build all projects
+pnpm run build
+
+# Test all projects
+pnpm run test
+
+# View dependency graph
+pnpm run dep-graph
+pnpm run graph
+
+# List all projects
+pnpm run projects
+
+# Affected builds (after git changes)
+pnpm run affected:build
+pnpm run affected:test
+```
+
+### Using Nx CLI Directly
+
+```bash
+# Build all projects
+npx nx run-many --target=build --all
+
+# Test all projects
+npx nx run-many --target=test --all
+
+# Build specific project
+npx nx build apps-cli-app
+npx nx build libs-core-utils
+
+# Test specific project
+npx nx test apps-service-app
+```
+
+## Project Dependencies
+
 ```
 service-app ──→ core-utils
     ↓              ↓
@@ -73,259 +142,59 @@ service-app ──→ core-utils
 cli-app ──→ core-utils
 ```
 
-### 3. Build Caching
-Gradle automatically caches task outputs:
-- First build: Compiles all projects
-- Second build: Uses cached outputs (instant)
-- After code change: Only affected projects rebuild
+## Workspace-Level Tasks
 
-### 4. Workspace-Level Tasks
 - `buildAll`: Build all subprojects
 - `testAll`: Test all subprojects
 - `cleanAll`: Clean all build artifacts
 - `showDependencyGraph`: Display workspace structure
 
-## Runnable Examples
+## Benefits
 
-### Using Gradle (Direct)
-
-From the project root, run these commands:
-
-```bash
-# Build entire workspace with caching
-./gradlew -p lesson16-nx-gradle buildAll
-
-# Run all tests
-./gradlew -p lesson16-nx-gradle testAll
-
-# View dependency graph
-./gradlew -p lesson16-nx-gradle showDependencyGraph
-
-# Test specific project
-./gradlew -p lesson16-nx-gradle :libs:core-utils:test
-./gradlew -p lesson16-nx-gradle :libs:data-models:test
-
-# Show info about a project
-./gradlew -p lesson16-nx-gradle :apps:service-app:showInfo
-
-# Run specific application
-./gradlew -p lesson16-nx-gradle :apps:cli-app:run
-./gradlew -p lesson16-nx-gradle :apps:service-app:run
-```
-
-### Using Nx (with npm)
-
-First install Nx dependencies:
-```bash
-npm install
-```
-
-Then run Nx commands from the project root:
-
-```bash
-# Build all projects
-nx run-many --target=build --all
-
-# Test all projects  
-nx run-many --target=test --all
-
-# Build specific project
-nx build apps-service-app
-nx build libs-core-utils
-
-# Test specific project
-nx test apps-cli-app
-nx test libs-data-models
-
-# View dependency graph (opens in browser)
-nx dep-graph
-
-# Show affected projects after changes
-nx affected --target=build
-nx affected --target=test
-nx affected:dep-graph
-```
-
-### npm Scripts (Convenience)
-
-```bash
-npm run build          # Build all projects
-npm run test           # Test all projects
-npm run dep-graph      # View dependency graph
-npm run affected:build # Build affected projects
-npm run affected:test  # Test affected projects
-```
-
-## Nx Benefits with Gradle
-
-### 1. **Scalability**
-Easily add new apps and libs without complex configurations.
-
-### 2. **Build Efficiency**
-- Incremental builds only touch affected projects
-- Shared build outputs across projects
-- Parallel task execution
-
-### 3. **Dependency Management**
-Explicit `implementation project()` declarations make dependencies clear and enforceable.
-
-### 4. **Code Organization**
-- Apps: Place in `apps/` for executable applications
-- Libs: Place in `libs/` for reusable code
-- Easy to discover and navigate
-
-## Project Details
-
-### Libraries
-
-#### core-utils (libs/core-utils)
-Provides string manipulation utilities:
-- `StringUtils.capitalize()`: Capitalize first letter
-- `StringUtils.reverse()`: Reverse a string
-
-#### data-models (libs/data-models)
-Defines shared data structures:
-- `User`: User entity with id, name, email
-
-### Applications
-
-#### service-app (apps/service-app)
-REST API server that uses:
-- `StringUtils` from core-utils
-- `User` model from data-models
-
-#### cli-app (apps/cli-app)
-Command-line tool that uses:
-- `StringUtils` from core-utils
-
-## Why Both Nx and Gradle?
-
-### Gradle's Role
-- **Build Execution**: Compiles code, runs tests, packages artifacts
-- **Dependency Resolution**: Manages JAR and Maven dependencies
-- **Task Management**: Defines and orchestrates build tasks
-- **Performance**: Handles actual compilation and testing
-
-### Nx's Role
-- **Workspace Management**: Organizes projects into apps/libs structure
-- **Task Orchestration**: Distributes and parallelizes Gradle builds
-- **Build Caching**: Caches task outputs across the workspace
-- **Dependency Tracking**: Identifies affected projects after changes
-- **Developer Experience**: Provides unified commands across workspace
-
-### When to Use Each
-
-| Tool   | Use Case                                              | Command                                |
-| ------ | ----------------------------------------------------- | -------------------------------------- |
-| Gradle | Quick builds, single project, raw compilation         | `./gradlew -p lesson16-nx-gradle build` |
-| Nx     | Monorepo scale, affected builds, caching optimization | `npm run build`                        |
-| Both   | Production monorepo with 50+ projects                 | Both together                          |
-
-## Gradle vs Nx Commands
-
-| Operation | Gradle                                              | Nx                           |
-| --------- | --------------------------------------------------- | ---------------------------- |
-| Build all | `./gradlew -p lesson16-nx-gradle buildAll`          | `npm run build`              |
-| Test all  | `./gradlew -p lesson16-nx-gradle testAll`           | `npm run test`               |
-| View deps | `./gradlew -p lesson16-nx-gradle showDependencyGraph` | `npm run dep-graph`          |
-| Affected  | Manual tracking                                 | `nx affected --target=build` |
-| Parallel  | Limited                                         | Full parallelization         |
+1. **Scalability**: Easy to add new apps and libs
+2. **Build Efficiency**: Incremental builds with caching
+3. **Dependency Management**: Clear project dependencies
+4. **Code Organization**: Apps/libs separation
+5. **Package Management**: pnpm workspaces for Node.js dependencies
 
 ## Testing
 
-### Using Gradle
 ```bash
-# Test all projects
-./gradlew -p lesson16-nx-gradle testAll
+# Test all
+./gradlew testAll
 
-# Test with verbose output
-./gradlew -p lesson16-nx-gradle testAll --info
+# Test specific
+./gradlew :libs:core-utils:test
 
-# Test specific library
-./gradlew -p lesson16-nx-gradle :libs:core-utils:test
-
-# Run specific test
-./gradlew -p lesson16-nx-gradle :libs:core-utils:test --tests StringUtilsTest.testCapitalize
+# Via pnpm
+pnpm run test
 ```
 
-### Using Nx
-```bash
-# Test all projects
-npm run test
+## Caching
 
-# Test specific project
-nx test apps-service-app
-nx test libs-core-utils
+Both Gradle and Nx provide caching:
 
-# Test affected projects after changes
-npm run affected:test
-```
-
-## Caching Demonstration
-
-### With Gradle
 ```bash
 # First build (compiles everything)
-./gradlew -p lesson16-nx-gradle buildAll
+./gradlew buildAll
 
 # Second build (uses cache - instant)
-./gradlew -p lesson16-nx-gradle buildAll
+./gradlew buildAll
 
-# After modifying StringUtils.java:
-# Only core-utils and dependent projects rebuild
-./gradlew -p lesson16-nx-gradle buildAll
-```
-
-### With Nx
-```bash
-# First build (compiles everything)
-npm run build
-
-# Second build (uses Nx cache - instant)
-npm run build
-
-# View what's cached
-nx dep-graph
-
-# Only rebuild affected after changes
-npm run affected:build
+# Nx also caches
+pnpm run build  # First time
+pnpm run build  # Cached
 ```
 
 ## Exercises
 
-1. **Add a New Library**: Create `libs/logging` with a `Logger` class, then run `./gradlew -p lesson16-nx-gradle buildAll`
-2. **Add a New App**: Create `apps:admin-app` that uses core-utils, then run `nx dep-graph`
-3. **Modify Dependencies**: Have cli-app also depend on data-models using `implementation project(":libs:data-models")`
-4. **Track Affected**: Modify StringUtils.java and run `npm run affected:build` to see what rebuilds
-5. **Explore Caching**: Run `./gradlew -p lesson16-nx-gradle buildAll` twice and observe cache behavior
-6. **Use Nx Dashboard**: Run `npm run dep-graph` to visualize the entire dependency graph
-7. **Add Custom Tasks**: Add a workspace-level task in build.gradle and orchestrate it with Nx
-
-## Advanced: Nx Integration (Optional)
-
-For production use, consider adding actual Nx:
-
-```bash
-npm install -g nx
-nx init
-```
-
-Nx will provide:
-- Advanced caching strategies
-- Dependency graph visualization
-- Affected task optimization
-- Plugin ecosystem
-
-## Key Takeaways
-
-- Gradle supports Nx-style workspace organization
-- Explicit project dependencies maintain clear architecture
-- Build caching significantly improves build performance
-- Workspace-level tasks coordinate multi-project builds
-- Monorepo pattern scales well with hundreds of projects
+1. Add a new library in `libs/` and include it in `settings.gradle`
+2. Add a new app in `apps/` that uses existing libraries
+3. Modify dependencies and observe affected builds
+4. Explore Nx dependency graph: `pnpm run graph`
 
 ## Resources
 
 - [Gradle Multi-Project Builds](https://docs.gradle.org/current/userguide/multi_project_builds.html)
 - [Nx Documentation](https://nx.dev)
-- [Gradle Build Cache](https://docs.gradle.org/current/userguide/build_cache.html)
+- [pnpm Workspaces](https://pnpm.io/workspaces)
