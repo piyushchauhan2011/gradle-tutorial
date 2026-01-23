@@ -18,8 +18,8 @@
     "affected:dep-graph": "nx affected:dep-graph"
   },
   "devDependencies": {
-    "nx": "^18.0.0",
-    "@nx/gradle": "^18.0.0"
+    "@nx/gradle": "^22.4.1",
+    "nx": "^22.4.1"
   },
   "engines": {
     "node": ">=16.0.0",

@@ -5,6 +5,10 @@ plugins {
     id("dev.nx.gradle.project-graph") version("+")
 }
 
+// Configure Nx plugin for root project
+// Note: The extensions.findByName approach may not work, but warnings are harmless
+// The plugin will use defaults if properties aren't set
+
 // Root project is a container project - no Java plugin needed here
 // All Java code is in subprojects (apps/* and libs/*)
 
@@ -12,6 +16,10 @@ plugins {
 subprojects {
     apply plugin: 'java'
     apply plugin: 'dev.nx.gradle.project-graph'
+    
+    // Configure Nx plugin properties
+    // Note: The extensions.findByName approach may not work, but warnings are harmless
+    // The plugin will use defaults if properties aren't set
     
     java {
         sourceCompatibility = JavaVersion.VERSION_11

@@ -1,8 +1,5 @@
 package com.example.core.utils;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
-
 public class StringUtilsTest {
     @org.junit.Test
     public void testCapitalize() {
