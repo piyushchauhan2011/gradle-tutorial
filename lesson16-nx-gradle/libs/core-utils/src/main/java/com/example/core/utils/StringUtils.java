@@ -9,6 +9,7 @@ public class StringUtils {
     }
 
     public static String reverse(String str) {
-        return new StringBuilder(str).reverse().toString();
+        StringBuilder sb = new StringBuilder(str);
+        return sb.reverse().toString();
     }
 }
