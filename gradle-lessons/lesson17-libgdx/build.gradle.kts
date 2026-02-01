@@ -1,0 +1,44 @@
+// Lesson 17: Game Development with libGDX - Kotlin DSL
+
+plugins {
+    java
+    application
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+repositories {
+    mavenCentral()
+}
+
+// libGDX version
+val gdxVersion = "1.12.1"
+
+dependencies {
+    // Core libGDX
+    implementation("com.badlogicgames.gdx:gdx:$gdxVersion")
+    implementation("com.badlogicgames.gdx:gdx-backend-lwjgl3:$gdxVersion")
+    implementation("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop")
+    
+    // Testing
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("com.badlogicgames.gdx:gdx-backend-headless:$gdxVersion")
+    testImplementation("com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop")
+}
+
+application {
+    mainClass.set("com.example.game.DesktopLauncher")
+}
+
+tasks.named<JavaExec>("run") {
+    doFirst {
+        System.setProperty("java.awt.headless", "false")
+    }
+    // macOS requires main thread to be first thread for OpenGL
+    if (System.getProperty("os.name").lowercase().contains("mac")) {
+        jvmArgs("-XstartOnFirstThread")
+    }
+}
