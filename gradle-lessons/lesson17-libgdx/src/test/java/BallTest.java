@@ -24,8 +24,8 @@ public class BallTest {
     
     @Test
     public void testBallUpdate() {
-        float initialX = ball.getX();
-        float initialY = ball.getY();
+        // float initialX = ball.getX();
+        // float initialY = ball.getY();
         
         // Update ball
         ball.update(0.016f, 800, 600); // ~60fps delta time
@@ -44,7 +44,7 @@ public class BallTest {
         testBall.getPosition().x = 20;
         testBall.getVelocity().x = -100; // Moving left
         
-        float initialVelocityX = testBall.getVelocity().x;
+        // float initialVelocityX = testBall.getVelocity().x;
         
         // Update should bounce off left wall
         testBall.update(0.016f, 800, 600);
@@ -69,7 +69,7 @@ public class BallTest {
     
     @Test
     public void testBallBounceY() {
-        float initialVelocityY = ball.getVelocity().y;
+        // float initialVelocityY = ball.getVelocity().y;
         ball.bounceY();
         
         // After bounceY, velocity Y should be positive (upward)
