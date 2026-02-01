@@ -1,4 +1,4 @@
-# Gradle Tutorial - Lessons 1-17
+# Gradle Tutorial - Lessons 1-18
 
 This workspace contains comprehensive Gradle tutorials covering fundamentals and advanced topics.
 
@@ -37,6 +37,7 @@ This workspace contains comprehensive Gradle tutorials covering fundamentals and
 15. [Lesson 15: Image Processing and Manipulation](lesson15-image-processing/README.md)
 16. [Lesson 16: OpenGL Graphics Programming with Java](lesson16-opengl/README.md)
 17. [Lesson 17: Game Development with libGDX](lesson17-libgdx/README.md)
+18. [Lesson 18: JavaFX Desktop Applications](lesson18-javafx/README.md)
 
 Each lesson includes runnable examples and exercises. See individual lesson README files for detailed instructions.
 
@@ -50,6 +51,7 @@ Use the `./gradlew` script with the `-p` flag to specify the lesson:
 ./gradlew -p lesson15-image-processing run     # Run an example
 ./gradlew -p lesson16-opengl run               # Run OpenGL example
 ./gradlew -p lesson17-libgdx run              # Run libGDX game
+./gradlew -p lesson18-javafx run              # Run JavaFX application
 ```
 
 ## Important: Lesson Dependencies
