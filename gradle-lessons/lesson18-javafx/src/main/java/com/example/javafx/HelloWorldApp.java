@@ -31,10 +31,12 @@ public class HelloWorldApp extends Application {
         
         // Create a label
         messageLabel = new Label("Hello, JavaFX!");
+        messageLabel.setId("messageLabel");
         messageLabel.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
         
         // Create a button
         Button clickButton = new Button("Click Me!");
+        clickButton.setId("clickButton");
         clickButton.setStyle("-fx-font-size: 14px; -fx-padding: 10px;");
         
         // Set button action

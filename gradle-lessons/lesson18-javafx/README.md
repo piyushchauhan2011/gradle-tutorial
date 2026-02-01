@@ -1,7 +1,5 @@
 # Lesson 18: JavaFX Desktop Applications
 
-> **⚠️ macOS Issue**: There's currently a known issue with JavaFX windows not appearing on macOS when run via Gradle. The code compiles and tests pass, but the window may not display. See [QUICKSTART.md](QUICKSTART.md) for details and workarounds. For reliable GUI development on macOS, use Lesson 14 (Swing) or Lesson 17 (libGDX) instead.
-
 ## Description
 This lesson introduces you to JavaFX, the modern successor to Swing for building rich desktop applications in Java. Learn how to create beautiful, responsive user interfaces with layouts, controls, styling, and event handling. JavaFX provides a powerful API for creating desktop applications with modern UI/UX principles.
 

@@ -33,6 +33,7 @@ public class CalculatorApp extends Application {
         
         // Create display field
         display = new TextField("0");
+        display.setId("display");
         display.setEditable(false);
         display.setStyle("-fx-font-size: 24px; -fx-alignment: center-right; -fx-padding: 10px;");
         display.setPrefHeight(60);
@@ -65,6 +66,7 @@ public class CalculatorApp extends Application {
         
         // Clear button
         Button clearBtn = createButton("C");
+        clearBtn.setId("clearButton");
         clearBtn.setStyle("-fx-background-color: #ff6b6b; -fx-text-fill: white; -fx-font-size: 16px;");
         clearBtn.setOnAction(e -> clear());
         buttonGrid.add(clearBtn, 0, 4, 4, 1);
@@ -83,6 +85,15 @@ public class CalculatorApp extends Application {
     
     private Button createButton(String text) {
         Button btn = new Button(text);
+        // Set ID for testing - use safe IDs for operators and special characters
+        String buttonId = text.equals("+") ? "buttonPlus" :
+                         text.equals("-") ? "buttonMinus" :
+                         text.equals("*") ? "buttonMultiply" :
+                         text.equals("/") ? "buttonDivide" :
+                         text.equals("=") ? "equalsButton" :
+                         text.equals(".") ? "buttonDecimal" :
+                         "button" + text;
+        btn.setId(buttonId);
         btn.setPrefSize(60, 60);
         btn.setStyle("-fx-font-size: 18px;");
         

@@ -3,12 +3,13 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.14'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
 }
 
 repositories {
@@ -16,7 +17,7 @@ repositories {
 }
 
 javafx {
-    version = "21.0.2"
+    version = "21.0.4"
     modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
@@ -29,40 +30,4 @@ dependencies {
 
 application {
     mainClass = 'com.example.javafx.HelloWorldApp'
-}
-
-// Custom run task for direct execution (bypasses plugin)
-tasks.register('runDirect', JavaExec) {
-    group = 'application'
-    description = 'Runs the JavaFX application directly without plugin configuration'
-    classpath = sourceSets.main.runtimeClasspath
-    mainClass = application.mainClass.get()
-    
-    // Ensure output is visible
-    standardOutput = System.out
-    errorOutput = System.err
-    
-    // Get module path from runtime classpath
-    def modulePath = configurations.runtimeClasspath.asPath
-    
-    // Configure JVM args for JavaFX
-    if (System.getProperty('os.name').toLowerCase().contains('mac')) {
-        jvmArgs = [
-            '-XstartOnFirstThread',
-            '--module-path', modulePath,
-            '--add-modules', 'javafx.controls,javafx.fxml'
-        ]
-    } else {
-        jvmArgs = [
-            '--module-path', modulePath,
-            '--add-modules', 'javafx.controls,javafx.fxml'
-        ]
-    }
-}
-
-// Configure default run task (uses plugin)
-tasks.named('run', JavaExec) {
-    // Ensure output is visible
-    standardOutput = System.out
-    errorOutput = System.err
 }

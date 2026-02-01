@@ -38,19 +38,23 @@ public class TodoListApp extends Application {
         
         // Create input area
         inputField = new TextField();
+        inputField.setId("inputField");
         inputField.setPromptText("Enter a new task...");
         inputField.setPrefWidth(300);
         inputField.setOnAction(e -> addTodo());
         
         Button addButton = new Button("Add");
+        addButton.setId("addButton");
         addButton.setStyle("-fx-background-color: #4ecdc4; -fx-text-fill: white; -fx-font-size: 14px;");
         addButton.setOnAction(e -> addTodo());
         
         Button deleteButton = new Button("Delete Selected");
+        deleteButton.setId("deleteButton");
         deleteButton.setStyle("-fx-background-color: #ff6b6b; -fx-text-fill: white; -fx-font-size: 14px;");
         deleteButton.setOnAction(e -> deleteSelected());
         
         Button clearButton = new Button("Clear All");
+        clearButton.setId("clearButton");
         clearButton.setStyle("-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-size: 14px;");
         clearButton.setOnAction(e -> clearAll());
         
@@ -64,6 +68,7 @@ public class TodoListApp extends Application {
         
         // Create ListView
         todoListView = new ListView<>();
+        todoListView.setId("todoListView");
         todoListView.setPrefHeight(300);
         todoListView.setStyle("-fx-font-size: 14px;");
         
