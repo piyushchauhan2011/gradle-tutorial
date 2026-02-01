@@ -1,0 +1,67 @@
+// Lesson 16: OpenGL with Java using LWJGL - Groovy DSL
+
+plugins {
+    id 'java'
+    id 'application'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+repositories {
+    mavenCentral()
+}
+
+// LWJGL version
+def lwjglVersion = "3.3.3"
+// Detect platform automatically
+def os = System.getProperty("os.name").toLowerCase()
+def arch = System.getProperty("os.arch").toLowerCase()
+def lwjglNatives
+if (os.contains("mac") || os.contains("darwin")) {
+    lwjglNatives = arch.contains("aarch64") || arch.contains("arm64") ? "natives-macos-arm64" : "natives-macos"
+} else if (os.contains("win")) {
+    lwjglNatives = "natives-windows"
+} else {
+    lwjglNatives = "natives-linux"
+}
+
+dependencies {
+    // LWJGL Core
+    implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
+    
+    // LWJGL modules
+    implementation "org.lwjgl:lwjgl"
+    implementation "org.lwjgl:lwjgl-assimp"
+    implementation "org.lwjgl:lwjgl-glfw"
+    implementation "org.lwjgl:lwjgl-openal"
+    implementation "org.lwjgl:lwjgl-opengl"
+    implementation "org.lwjgl:lwjgl-stb"
+    
+    // Native libraries (platform-specific)
+    runtimeOnly "org.lwjgl:lwjgl::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-assimp::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-glfw::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-openal::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-opengl::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-stb::$lwjglNatives"
+    
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+}
+
+application {
+    mainClass = 'OpenGLTriangle'
+}
+
+tasks.named('run', JavaExec) {
+    doFirst {
+        System.setProperty('java.awt.headless', 'false')
+    }
+    // macOS requires main thread to be first thread for GLFW
+    if (System.getProperty('os.name').toLowerCase().contains('mac')) {
+        jvmArgs '-XstartOnFirstThread'
+    }
+}

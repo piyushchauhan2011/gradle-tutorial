@@ -1,4 +1,4 @@
-# Gradle Tutorial - Lessons 1-15
+# Gradle Tutorial - Lessons 1-16
 
 This workspace contains comprehensive Gradle tutorials covering fundamentals and advanced topics.
 
@@ -35,6 +35,7 @@ This workspace contains comprehensive Gradle tutorials covering fundamentals and
 13. [Lesson 13: Scala Consumer App](lesson13-scala-consumer/README.md)
 14. [Lesson 14: Swing GUI Applications](lesson14-swing-gui/README.md)
 15. [Lesson 15: Image Processing and Manipulation](lesson15-image-processing/README.md)
+16. [Lesson 16: OpenGL Graphics Programming with Java](lesson16-opengl/README.md)
 
 Each lesson includes runnable examples and exercises. See individual lesson README files for detailed instructions.
 
@@ -46,6 +47,7 @@ Use the `./gradlew` script with the `-p` flag to specify the lesson:
 ./gradlew -p lesson01-intro hello              # Run a specific lesson task
 ./gradlew -p lesson02-setup build              # Build a lesson
 ./gradlew -p lesson15-image-processing run     # Run an example
+./gradlew -p lesson16-opengl run               # Run OpenGL example
 ```
 
 ## Important: Lesson Dependencies
