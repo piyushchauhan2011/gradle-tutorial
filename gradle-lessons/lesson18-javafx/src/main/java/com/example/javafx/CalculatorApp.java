@@ -35,7 +35,7 @@ public class CalculatorApp extends Application {
         display = new TextField("0");
         display.setId("display");
         display.setEditable(false);
-        display.setStyle("-fx-font-size: 24px; -fx-alignment: center-right; -fx-padding: 10px;");
+        display.getStyleClass().add("calculator-display");
         display.setPrefHeight(60);
         
         // Create button grid
@@ -67,7 +67,9 @@ public class CalculatorApp extends Application {
         // Clear button
         Button clearBtn = createButton("C");
         clearBtn.setId("clearButton");
-        clearBtn.setStyle("-fx-background-color: #ff6b6b; -fx-text-fill: white; -fx-font-size: 16px;");
+        clearBtn.getStyleClass().clear(); // Remove default styles
+        clearBtn.getStyleClass().add("calculator-button");
+        clearBtn.getStyleClass().add("clear-button");
         clearBtn.setOnAction(e -> clear());
         buttonGrid.add(clearBtn, 0, 4, 4, 1);
         
@@ -78,6 +80,12 @@ public class CalculatorApp extends Application {
         root.getChildren().addAll(display, buttonGrid);
         
         Scene scene = new Scene(root, 300, 400);
+        
+        // Load external CSS stylesheet
+        scene.getStylesheets().add(
+            CalculatorApp.class.getResource("/com/example/javafx/calculator.css").toExternalForm()
+        );
+        
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
@@ -95,15 +103,18 @@ public class CalculatorApp extends Application {
                          "button" + text;
         btn.setId(buttonId);
         btn.setPrefSize(60, 60);
-        btn.setStyle("-fx-font-size: 18px;");
+        
+        // Apply CSS classes based on button type
+        btn.getStyleClass().add("calculator-button");
         
         if (text.matches("[0-9.]")) {
+            btn.getStyleClass().add("number-button");
             btn.setOnAction(e -> numberPressed(text));
         } else if (text.equals("=")) {
-            btn.setStyle("-fx-background-color: #4ecdc4; -fx-text-fill: white; -fx-font-size: 18px;");
+            btn.getStyleClass().add("equals-button");
             btn.setOnAction(e -> calculate());
         } else {
-            btn.setStyle("-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-size: 18px;");
+            btn.getStyleClass().add("operator-button");
             btn.setOnAction(e -> operationPressed(text));
         }
         

@@ -1,0 +1,118 @@
+/* JavaFX CSS Stylesheet for Lesson 18 */
+
+/* Root container styling */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Label styles */
+.label {
+    -fx-text-fill: #ffffff;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+}
+
+.message-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 10px;
+}
+
+/* Button styles */
+.button {
+    -fx-background-color: #4ecdc4;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: #45b7aa;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 0, 3);
+}
+
+.button:pressed {
+    -fx-background-color: #3da89a;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+.primary-button {
+    -fx-background-color: #4ecdc4;
+}
+
+.secondary-button {
+    -fx-background-color: #95a5a6;
+}
+
+.danger-button {
+    -fx-background-color: #ff6b6b;
+}
+
+.danger-button:hover {
+    -fx-background-color: #ee5a5a;
+}
+
+/* TextField styles */
+.text-field {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-background-radius: 5px;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-border-color: #4ecdc4;
+    -fx-border-width: 2px;
+    -fx-background-color: white;
+}
+
+/* ListView styles */
+.list-view {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 5px;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+}
+
+.list-cell {
+    -fx-background-color: white;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+}
+
+.list-cell:selected {
+    -fx-background-color: #4ecdc4;
+    -fx-text-fill: white;
+}
+
+.list-cell:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+/* VBox and HBox containers */
+.container {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+}
+
+.card {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 3);
+    -fx-padding: 20px;
+}

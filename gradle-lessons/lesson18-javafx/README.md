@@ -45,11 +45,24 @@ This lesson introduces you to JavaFX, the modern successor to Swing for building
 - **Event Objects**: Access event information
 - **Lambda Expressions**: Modern way to handle events
 
-### 6. Styling
+### 6. Styling with CSS
 - **Inline Styles**: `setStyle("-fx-property: value;")`
-- **CSS Files**: External stylesheets
+- **CSS Files**: External stylesheets loaded via `scene.getStylesheets().add()`
 - **CSS Selectors**: Style by class, ID, or type
 - **JavaFX CSS**: Special properties prefixed with `-fx-`
+- **CSS Classes**: Use `getStyleClass().add("class-name")` to apply styles
+- **CSS Pseudo-classes**: `:hover`, `:pressed`, `:focused`, `:selected`
+- **Benefits**: Separation of style from code, easier maintenance, reusable styles
+
+### 7. FXML - XML-Based UI Layouts
+- **What is FXML?**: XML format for defining JavaFX UI layouts
+- **Benefits**: Separates UI structure from Java code, easier for designers
+- **FXMLLoader**: Loads FXML files and creates UI components
+- **Controllers**: Java classes that handle FXML events and logic
+- **@FXML Annotation**: Marks fields and methods for FXML injection
+- **fx:id**: Links FXML elements to controller fields
+- **onAction**: Links FXML events to controller methods
+- **Scene Builder**: Visual tool for creating FXML files (optional)
 
 ## Runnable Examples
 
@@ -117,6 +130,250 @@ application {
 - Dynamic data management
 - Multiple event handlers
 - HBox and VBox combination
+
+## CSS Styling Deep Dive
+
+### Loading CSS Files
+
+```java
+// Load CSS from resources
+scene.getStylesheets().add(
+    MyApp.class.getResource("/com/example/javafx/styles.css").toExternalForm()
+);
+```
+
+### CSS Class Selectors
+
+Apply CSS classes to JavaFX nodes:
+
+```java
+// Add CSS class
+button.getStyleClass().add("primary-button");
+
+// Add multiple classes
+button.getStyleClass().addAll("button", "primary-button");
+
+// Remove class
+button.getStyleClass().remove("old-class");
+```
+
+### CSS ID Selectors
+
+Use IDs for unique styling:
+
+```java
+// Set ID
+label.setId("messageLabel");
+
+// CSS selector: #messageLabel
+```
+
+### Common JavaFX CSS Properties
+
+```css
+/* Colors and Backgrounds */
+-fx-background-color: #4ecdc4;
+-fx-background-radius: 5px;
+-fx-background-image: url("image.png");
+
+/* Text */
+-fx-text-fill: white;
+-fx-font-size: 18px;
+-fx-font-weight: bold;
+-fx-font-family: "Arial";
+
+/* Borders */
+-fx-border-color: #cccccc;
+-fx-border-width: 2px;
+-fx-border-radius: 5px;
+
+/* Spacing */
+-fx-padding: 10px;
+-fx-spacing: 15px;
+
+/* Effects */
+-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+-fx-opacity: 0.8;
+
+/* Layout */
+-fx-alignment: center;
+-fx-pref-width: 300px;
+-fx-pref-height: 200px;
+```
+
+### CSS Pseudo-classes
+
+```css
+/* Hover state */
+.button:hover {
+    -fx-background-color: #45b7aa;
+}
+
+/* Pressed state */
+.button:pressed {
+    -fx-background-color: #3da89a;
+}
+
+/* Focused state */
+.text-field:focused {
+    -fx-border-color: #4ecdc4;
+}
+
+/* Selected state */
+.list-cell:selected {
+    -fx-background-color: #4ecdc4;
+}
+```
+
+### Example: styles.css
+
+See `src/main/resources/com/example/javafx/styles.css` for a complete example with:
+- Root container styling
+- Button styles with hover/pressed states
+- TextField styling
+- ListView styling
+- Container classes
+
+## FXML Deep Dive
+
+### What is FXML?
+
+FXML is an XML-based markup language for defining JavaFX user interfaces. It separates UI structure from Java code, making it easier for designers and developers to collaborate.
+
+### Basic FXML Structure
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx" 
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.MyController"
+      spacing="20.0">
+   <Label text="Hello World"/>
+   <Button text="Click Me" onAction="#handleClick"/>
+</VBox>
+```
+
+### Key FXML Concepts
+
+#### 1. Import Statements
+```xml
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+```
+Import JavaFX classes you'll use in FXML.
+
+#### 2. Controller Declaration
+```xml
+<VBox fx:controller="com.example.MyController">
+```
+Links FXML to a controller class.
+
+#### 3. Element IDs (fx:id)
+```xml
+<Label fx:id="messageLabel" text="Hello"/>
+```
+Links FXML element to controller field:
+```java
+@FXML
+private Label messageLabel;
+```
+
+#### 4. Event Handlers (onAction)
+```xml
+<Button onAction="#handleButtonClick"/>
+```
+Links event to controller method:
+```java
+@FXML
+private void handleButtonClick() {
+    // Handle click
+}
+```
+
+### Controller Pattern
+
+```java
+public class MyController {
+    @FXML
+    private Label messageLabel;
+    
+    @FXML
+    private Button clickButton;
+    
+    @FXML
+    private void initialize() {
+        // Called after FXML loading
+        // Initialize components here
+    }
+    
+    @FXML
+    private void handleButtonClick() {
+        messageLabel.setText("Clicked!");
+    }
+}
+```
+
+### Loading FXML
+
+```java
+FXMLLoader loader = new FXMLLoader(
+    MyApp.class.getResource("/com/example/myview.fxml")
+);
+Parent root = loader.load();
+Scene scene = new Scene(root);
+```
+
+### FXML Attributes
+
+- **fx:id**: Element identifier for controller injection
+- **onAction**: Event handler method name
+- **text**: Text content for labels, buttons
+- **prefWidth/prefHeight**: Preferred dimensions
+- **styleClass**: CSS class names
+- **id**: CSS ID selector
+
+### Nested Containers
+
+```xml
+<VBox>
+   <HBox spacing="10.0">
+      <TextField fx:id="inputField"/>
+      <Button text="Add" onAction="#handleAdd"/>
+   </HBox>
+   <ListView fx:id="itemList"/>
+</VBox>
+```
+
+### Benefits of FXML
+
+1. **Separation of Concerns**: UI structure separate from logic
+2. **Designer-Friendly**: Visual tools like Scene Builder
+3. **Maintainability**: Easier to modify UI without touching code
+4. **Reusability**: FXML files can be reused across applications
+5. **Version Control**: UI changes tracked separately
+
+### Example: HelloWorld.fxml
+
+See `src/main/resources/com/example/javafx/HelloWorld.fxml` for a complete example.
+
+### Combining FXML with CSS
+
+```java
+Scene scene = new Scene(fxmlLoader.load(), 400, 300);
+scene.getStylesheets().add(
+    MyApp.class.getResource("/com/example/styles.css").toExternalForm()
+);
+```
+
+Apply CSS classes in FXML:
+```xml
+<Button styleClass="primary-button" text="Click Me"/>
+```
 
 ## Code Structure
 
